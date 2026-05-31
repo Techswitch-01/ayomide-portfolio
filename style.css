@@ -1,0 +1,289 @@
+/* --- 1. GLOBAL VARIABLES (The Color Palette) --- */
+:root {
+    /* Precision Engineering Colors */
+    --carbon-black: #0D0D0D; 
+    --slate-grey: #1A1A1A;
+    --electric-blue: #00E5FF; /* High-performance accent color */
+    --text-main: #F2F2F2;
+    --text-muted: #A0A0A0;
+}
+
+/* --- 2. GLOBAL RESET (Clearing the factory settings) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- 3. BASE BODY STYLING --- */
+body {
+    background-color: var(--carbon-black);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden; /* Keeps the layout from breaking horizontally */
+}
+
+/* A quick class we can use later for highlighting text */
+.accent-text {
+    color: var(--electric-blue);
+}
+/* --- 4. NAVIGATION BAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%; /* Keeps it responsive on the sides */
+    background-color: rgba(26, 26, 26, 0.9); /* Slate grey with slight transparency */
+    border-bottom: 1px solid var(--electric-blue);
+    position: fixed; /* Keeps the nav at the top when scrolling */
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth fade effect */
+}
+
+.nav-links a:hover {
+    color: var(--electric-blue);
+}
+
+/* Custom Button Style for the Contact link */
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid var(--electric-blue);
+    color: var(--electric-blue) !important; /* Overrides the default link color */
+    padding: 8px 24px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--electric-blue);
+    color: var(--carbon-black) !important;
+}
+/* --- 5. HERO SECTION --- */
+.hero {
+    height: 100vh; /* Takes up the full height of the screen */
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin-top: 50px; /* Pushes it down slightly below the fixed navbar */
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Massive, striking headline */
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.sub-hero {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+/* Button Grouping */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* New Filled Button Style */
+.btn-primary.filled {
+    background-color: var(--electric-blue);
+    color: var(--carbon-black) !important;
+    font-weight: bold;
+}
+
+.btn-primary.filled:hover {
+    background-color: transparent;
+    color: var(--electric-blue) !important;
+}
+
+/* Secondary Ghost Button */
+.btn-secondary {
+    padding: 8px 24px;
+    border: 1px solid var(--text-muted);
+    color: var(--text-main);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-main);
+    color: #fff;
+}
+/* --- 6. SKILLS SECTION --- */
+.skills-section {
+    padding: 100px 10%;
+    background-color: var(--slate-grey); /* Creates visual separation from the black hero */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    /* This automatically handles responsiveness! */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: var(--carbon-black);
+    padding: 40px 30px;
+    border-radius: 8px;
+    border-left: 4px solid var(--electric-blue);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px); /* Lifts the card up */
+    box-shadow: 0 10px 20px rgba(0, 229, 255, 0.1); /* Adds a faint blue glow */
+}
+
+.skill-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.skill-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+/* --- 7. PROJECTS SECTION --- */
+.projects-section {
+    padding: 100px 10%;
+    background-color: var(--carbon-black); /* Back to the darkest color */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background-color: var(--slate-grey);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent; /* Hidden border until hovered */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--electric-blue); /* The border lights up */
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.tech-stack {
+    font-size: 0.85rem;
+    color: var(--electric-blue);
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.project-desc {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+/* A slightly smaller version of your secondary button */
+.btn-small {
+    padding: 6px 16px;
+    font-size: 0.9rem;
+}
+/* --- 8. CONTACT SECTION & FOOTER --- */
+.contact-section {
+    padding: 100px 10%;
+    background-color: var(--slate-grey);
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-text {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+.footer {
+    background-color: var(--carbon-black);
+    text-align: center;
+    padding: 25px 10%;
+    border-top: 1px solid rgba(0, 229, 255, 0.2); /* Faint blue line to separate the footer */
+}
+
+.footer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+/* --- 9. JAVASCRIPT ANIMATION CLASSES --- */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.5, 0, 0, 1); /* Ultra-smooth mechanical easing */
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

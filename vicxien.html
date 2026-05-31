@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VICXIEN Votes | Architecture & Visuals</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Showcase Specific Layout Styles */
+        .showcase-container {
+            padding: 100px 10%;
+            max-width: 1200px; /* Widened to fit the grid nicely */
+            margin: 0 auto;
+        }
+        
+        .showcase-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-heading {
+            font-size: 1.8rem;
+            margin: 50px 0 20px 0;
+            border-bottom: 1px solid var(--electric-blue);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Grid for Screenshots */
+        .ui-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .ui-card img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .ui-card img:hover {
+            transform: translateY(-10px);
+            border-color: var(--electric-blue);
+        }
+
+        .ui-card p {
+            text-align: center;
+            margin-top: 15px;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* Layout for Videos */
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .video-box {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px; /* Keeps mobile screen records looking like a phone */
+            text-align: center;
+        }
+
+        .video-box video {
+            width: 100%;
+            border-radius: 16px; /* Slightly rounder for mobile feel */
+            border: 2px solid var(--electric-blue);
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.15);
+        }
+
+        .video-box h3 {
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><span class="accent-text">Ayo</span>mide.</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="btn-secondary">← Back to Main Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="showcase-container">
+        
+        <div class="showcase-header">
+            <h1>VICXIEN Votes <span class="accent-text">Visuals</span></h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 10px auto;">
+                A comprehensive look at the user interface and secure voting flow, engineered with Flutter and Firebase for McPherson University student governance.
+            </p>
+        </div>
+
+        <h2 class="section-heading">Application Interface</h2>
+        <div class="ui-grid">
+            <div class="ui-card">
+                <img src="assets/sign-in.png" alt="Sign In Screen">
+                <p>Secure Sign-In</p>
+            </div>
+            <div class="ui-card">
+                <img src="assets/sign-up.png" alt="Sign Up Screen">
+                <p>Registration Flow</p>
+            </div>
+            <div class="ui-card">
+                <img src="assets/dashboard.png" alt="Main Dashboard">
+                <p>User Dashboard</p>
+            </div>
+            <div class="ui-card">
+                <img src="assets/notifications.png" alt="Notifications">
+                <p>Live Notifications</p>
+            </div>
+        </div>
+
+        <h2 class="section-heading">System Demonstrations</h2>
+        <div class="video-container">
+            
+            <div class="video-box">
+                <h3>App Initialization (Splash)</h3>
+                <video autoplay loop muted playsinline>
+                    <source src="assets/splash-screen.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-box">
+                <h3>Full Voting Architecture Flow</h3>
+                <video controls>
+                    <source src="assets/voting-process.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
