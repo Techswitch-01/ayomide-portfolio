@@ -1,9 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ayomide Sobukonla | Automotive Innovator & Systems Engineer</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Ayomide Sobukonla | Systems Engineer & Automotive Innovator</title>
+    <meta name="description" content="Official portfolio of Ayomide Sobukonla — Systems Engineer, CEO of Vicxien Corp, specializing in Flutter, Firebase, IoT, and hands-on automotive tech.">
+    
+    <!-- Google Knowledge Graph JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ayomide Sobukonla",
+      "jobTitle": "Systems Engineer & CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Vicxien Corp",
+        "description": "Tech/Automotive"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": " Mcpherson university,COLCOM College of Computing"
+      },
+      "image": "https://sobukonla-ayomide.netlify.app/assets/ayomide-sobukonla-ceo-vicxien-corp.jpg",
+      "url": "https://sobukonla-ayomide.netlify.app",
+      "sameAs": [
+        "https://www.linkedin.com/in/sobukonla-ayomide-061712289",
+        "https://github.com/Techswitch-01"
+      ]
+    }
+    </script>
     
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -15,7 +43,7 @@
                 extend: {
                     "colors": {
                         "on-background": "#101017",
-                        "primary": "#101017", /* Black text */
+                        "primary": "#101017",
                         "on-secondary-container": "#afb6bd",
                         "on-tertiary": "#2f3131",
                         "surface-dim": "#f4f4f5",
@@ -34,12 +62,12 @@
                         "surface-container-high": "#ebebeb",
                         "surface-container": "#f4f4f5",
                         "background": "#f4f4f5",
-                        "void-black": "#f4f4f5", /* Light Gray Background */
-                        "deep-charcoal": "#ffffff", /* Pure White */
-                        "machine-gray": "#6b7280", /* Mid Gray */
-                        "electric-blue": "#D30805", /* Brand Red applied to previous accent classes */
+                        "void-black": "#f4f4f5", 
+                        "deep-charcoal": "#ffffff", 
+                        "machine-gray": "#6b7280", 
+                        "electric-blue": "#D30805", 
                         "brand-red": "#D30805",
-                        "on-surface-variant": "#4a4a4a" /* Dark Gray text */
+                        "on-surface-variant": "#4a4a4a" 
                     },
                     "borderRadius": {
                         "DEFAULT": "0.25rem",
@@ -81,22 +109,22 @@
     </script>
     <style>
         body {
-            background-color: #f4f4f5; /* Light gray base */
-            color: #101017; /* Black text */
+            background-color: #f4f4f5; 
+            color: #101017; 
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.7); /* White frosted glass */
+            background: rgba(255, 255, 255, 0.7); 
             backdrop-filter: blur(24px);
-            border: 1px solid rgba(0, 0, 0, 0.08); /* Dark subtle border */
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04); /* Soft shadow for light mode */
+            border: 1px solid rgba(0, 0, 0, 0.08); 
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04); 
             transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background 0.6s ease, border-color 0.6s ease;
         }
         
         .glass-card:hover {
-            border-color: rgba(211, 8, 5, 0.3); /* Red border tint on hover */
+            border-color: rgba(211, 8, 5, 0.3); 
         }
 
         .machined-divider {
@@ -132,7 +160,7 @@
             width: 100%;
             height: 100%;
             z-index: 0;
-            opacity: 0.7; /* Increased opacity so red grid pops on white */
+            opacity: 0.7; 
             pointer-events: none;
         }
 
@@ -142,7 +170,7 @@
         }
 
         .frosted-nav {
-            background: rgba(244, 244, 245, 0.85); /* Light frosted nav */
+            background: rgba(244, 244, 245, 0.85); 
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.08);
         }
@@ -187,7 +215,6 @@
                     I build scalable digital solutions and practical hardware systems. From engineering secure mobile architectures to hands-on automotive prototyping and CNG conversions, my mission is to drive the next generation of smart, sustainable mobility.
                 </p>
                 <div class="flex flex-wrap gap-6 pt-4">
-                    <!-- bg-primary is now black, text-void-black is now light gray -->
                     <a class="magnetic-btn px-8 py-4 bg-primary text-void-black font-bold font-headline-md text-[16px] rounded-full flex items-center gap-2 hover:bg-electric-blue transition-colors" href="#projects">
                         Explore My Builds <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
                     </a>
@@ -210,7 +237,8 @@
             
             <div class="md:col-span-5 relative reveal-item" style="transition-delay: 200ms;">
                 <div class="profile-card-float relative w-full aspect-square rounded-card overflow-hidden glass-card p-2 group cursor-pointer">
-                    <img alt="Ayomide Sobukonla" class="w-full h-full object-cover rounded-[14px] grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" src="assets/ayomide.jpg"/>
+                    <!-- SEO Image Update -->
+                    <img alt="Ayomide Sobukonla" class="w-full h-full object-cover rounded-[14px] grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" src="assets/ayomide-sobukonla-ceo-vicxien-corp.jpg"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 
@@ -281,7 +309,6 @@
             <div class="md:col-span-8 group relative overflow-hidden rounded-card glass-card h-[500px] reveal-item" style="transition-delay: 100ms;">
                 <div class="absolute inset-0 bg-gradient-to-t from-void-black via-void-black/80 to-transparent z-10"></div>
                 <div class="absolute inset-0 overflow-hidden">
-                    <!-- Opacity increased to 80 to show well on light backgrounds -->
                     <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-80 grayscale contrast-125 group-hover:grayscale-0" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop" alt="VICXIEN Votes Background"/>
                 </div>
                 <div class="absolute bottom-0 left-0 p-12 w-full z-20">
@@ -400,7 +427,6 @@
 </footer>
 
 <script>
-    // 1. WebGL Background Shader Engine (PERFORMANCE OPTIMIZED for LIGHT MODE)
     (function() {
         const canvas = document.getElementById('shader-canvas-ANIMATION_7');
         if (!canvas) return;
@@ -506,9 +532,8 @@
             
             m += smoothstep(0.08, 0.0, minDist);
             
-            // LIGHT MODE RENDER: Mixes a light gray background with Red grid lines
             vec3 bgColor = vec3(0.96, 0.96, 0.97); 
-            vec3 lineColor = vec3(0.82, 0.03, 0.02); // The Brand Red
+            vec3 lineColor = vec3(0.82, 0.03, 0.02); 
             
             vec3 color = mix(bgColor, lineColor, m);
             
@@ -572,7 +597,6 @@
         requestAnimationFrame(render);
     })();
 
-    // 2. Magnetic Button Physics
     const magneticBtns = document.querySelectorAll('.magnetic-btn');
     magneticBtns.forEach(btn => {
         btn.addEventListener('mousemove', (e) => {
@@ -590,7 +614,6 @@
         });
     });
 
-    // 3. Cascade Reveal Intersection Observer
     const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -603,7 +626,6 @@
 
     document.querySelectorAll('.reveal-item').forEach(el => observer.observe(el));
 
-    // 4. Precision Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -631,7 +653,6 @@
         });
     });
 
-    // 5. Mobile Menu Toggle Logic
     const mobileMenuBtn = document.querySelector('button.md\\:hidden');
     const navMenu = document.querySelector('.hidden.md\\:flex');
 
