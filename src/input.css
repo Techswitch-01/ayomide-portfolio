@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 88px;
+    }
+
+    body {
+        @apply bg-paper text-ink font-body antialiased;
+        overflow-x: hidden;
+    }
+
+    [hidden] {
+        display: none !important;
+    }
+
+    :focus-visible {
+        outline: 2px solid #D30805;
+        outline-offset: 3px;
+        border-radius: 4px;
+    }
+}
+
+@layer components {
+    .container-x {
+        @apply w-full max-w-container mx-auto px-5 md:px-10;
+    }
+
+    .eyebrow {
+        @apply font-mono text-[11px] uppercase tracking-[0.18em] text-steel;
+    }
+
+    .card {
+        @apply bg-white/80 border border-black/[0.08] rounded-card;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+        transition: border-color 0.4s ease;
+    }
+
+    .card:hover {
+        border-color: rgba(211, 8, 5, 0.3);
+    }
+
+    /* Vehicle-style spec sheet rows */
+    .spec {
+        @apply grid grid-cols-[110px_1fr] gap-4 py-2.5 border-t border-dashed border-black/10 text-sm;
+    }
+
+    .spec dt {
+        @apply font-mono text-[11px] uppercase tracking-[0.14em] text-steel pt-0.5;
+    }
+
+    .spec dd {
+        @apply text-ink font-medium;
+    }
+
+    .chip {
+        @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-black/5 font-mono text-[11px] font-medium text-ink;
+    }
+
+    .chip img {
+        @apply w-3.5 h-3.5;
+    }
+
+    .btn {
+        @apply inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-display font-semibold text-[15px] transition-colors;
+    }
+
+    .btn-solid {
+        @apply btn bg-ink text-paper hover:bg-brand;
+    }
+
+    .btn-line {
+        @apply btn border border-black/20 text-ink hover:bg-black/5;
+    }
+
+    .phone {
+        @apply relative rounded-[28px] bg-ink p-[7px] shadow-xl;
+    }
+
+    .phone img {
+        @apply w-full h-auto rounded-[22px] block;
+    }
+
+    .filter-btn {
+        @apply px-4 py-2 rounded-full border border-black/15 font-mono text-[12px] uppercase tracking-[0.12em] text-steel transition-colors;
+    }
+
+    .filter-btn[aria-pressed="true"] {
+        @apply bg-ink text-paper border-ink;
+    }
+
+    .marquee {
+        mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+
+    .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee 40s linear infinite;
+    }
+
+    .blueprint {
+        background-color: #101017;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+}
+
+@keyframes marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Reveal only when JS is running, so content never stays hidden */
+.js .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js .reveal.is-in {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .js .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    #hero-canvas {
+        display: none;
+    }
+
+    .marquee-track {
+        animation: none;
+    }
+}

@@ -2,195 +2,275 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>VICXIEN Votes | System Architecture & Visuals</title>
-    <link rel="icon" type="image/jpeg" href="assets/ayomide-sobukonla-ceo-vicxien-corp.jpg" />
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "brand-red": "#D30805",
-                        "brand-black": "#101017",
-                        "brand-white": "#FFFFFF",
-                        "brand-gray": "#F4F4F5",
-                    },
-                    fontFamily: {
-                        "headline-md": ["Outfit"],
-                        "body-md": ["Manrope"],
-                        "label-caps": ["Outfit"]
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { background-color: #F4F4F5; color: #101017; scroll-behavior: smooth; overflow-x: hidden; }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script>document.documentElement.classList.add('js');</script>
 
-        /* The Frosted Light-Glass Effect */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(24px);
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
-        }
+    <title>VICXIEN Votes | Case Study by Ayomide Sobukonla</title>
+    <meta name="description" content="How VICXIEN Votes keeps a student election to one verified ballot per student: biometric checks, device binding, Firestore transactions and SHA-256 vote receipts.">
+    <link rel="canonical" href="https://sobukonla-ayomide.netlify.app/vicxien.html">
+    <meta name="theme-color" content="#f4f4f5">
+    <link rel="icon" type="image/jpeg" href="assets/ayomide-sobukonla-ceo-vicxien-corp.jpg">
 
-        .glass-card:hover {
-            border-color: rgba(211, 8, 5, 0.3); /* Red border on hover */
-        }
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sobukonla-ayomide.netlify.app/vicxien.html">
+    <meta property="og:title" content="VICXIEN Votes: one student, one verified ballot">
+    <meta property="og:description" content="Case study of a secure student voting app built with Flutter and Firebase.">
+    <meta property="og:image" content="https://sobukonla-ayomide.netlify.app/assets/dashboard.png">
+    <meta name="twitter:card" content="summary_large_image">
 
-        .machined-divider {
-            height: 1px;
-            background: rgba(0, 0, 0, 0.1);
-            margin: 60px 0 40px 0;
-        }
-
-        .reveal-item { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal-item.active { opacity: 1; transform: translateY(0); }
-
-        .frosted-nav {
-            background: rgba(244, 244, 245, 0.85);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        }
-
-        .magnetic-btn { display: inline-flex; transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1); }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="font-body-md selection:bg-brand-red selection:text-white">
+<body class="selection:bg-brand selection:text-white">
 
-<!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 frosted-nav">
-    <div class="flex justify-between items-center px-6 md:px-16 h-20 w-full max-w-[1200px] mx-auto">
-        <div class="font-headline-md text-2xl font-bold text-brand-black tracking-tighter">
-            <span class="text-brand-red">Ayo</span>mide.
+<!-- Icon sprite (Lucide, ISC licence) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <defs>
+        <g id="i-back"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></g>
+        <g id="i-finger"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/><path d="M14 13.12c0 2.38 0 6.38-1 8.88"/><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/><path d="M2 12a10 10 0 0 1 18-6"/><path d="M2 16h.01"/><path d="M21.8 16c.2-2 .131-5.354 0-6"/><path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"/><path d="M8.65 22c.21-.66.45-1.32.57-2"/><path d="M9 6.8a6 6 0 0 1 9 5.2v2"/></g>
+        <g id="i-phone"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></g>
+        <g id="i-lock"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g>
+        <g id="i-receipt"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></g>
+        <g id="i-chart"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></g>
+        <g id="i-file"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></g>
+        <g id="i-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></g>
+        <g id="i-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></g>
+        <g id="i-clock"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g>
+        <g id="i-list"><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M3 6h.01"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M8 6h13"/></g>
+        <g id="i-key"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/></g>
+        <g id="i-arrow"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></g>
+    </defs>
+</svg>
+
+<header class="fixed top-0 inset-x-0 z-50 bg-paper/85 backdrop-blur-xl border-b border-black/[0.08]">
+    <nav class="container-x flex items-center justify-between h-[72px]" aria-label="Main">
+        <a href="index.html" class="font-display text-2xl font-bold tracking-tighter"><span class="text-brand">Ayo</span>mide.</a>
+        <a href="index.html#work" class="btn-line !py-2.5 !px-5 !text-[14px]">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-back"/></svg>
+            All work
+        </a>
+    </nav>
+</header>
+
+<main class="pt-[72px]">
+
+    <!-- INTRO -->
+    <section class="container-x pt-16 md:pt-24 pb-16 grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 reveal">
+            <p class="eyebrow text-brand mb-4">Case study · Mobile app · Vicxien Corp</p>
+            <h1 class="font-display font-bold text-[44px] md:text-[64px] leading-[1.05] tracking-tight mb-6">
+                VICXIEN Votes:<br>one student, one verified ballot.
+            </h1>
+            <p class="text-lg leading-relaxed text-ink/75 max-w-xl mb-8">
+                A student election app for McPherson University. The hard part of digital voting isn't the ballot screen. It's proving that every vote came from a real student, on their own phone, exactly once, and being able to show the result afterwards.
+            </p>
+            <dl class="max-w-md">
+                <div class="spec"><dt>Role</dt><dd>Design, engineering, deployment</dd></div>
+                <div class="spec"><dt>Stack</dt><dd class="flex flex-wrap gap-2">
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/flutter.svg" alt="">Flutter</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/firebase.svg" alt="">Firebase</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/cloudinary.svg" alt="">Cloudinary</span>
+                </dd></div>
+                <div class="spec"><dt>Client</dt><dd>McPherson University</dd></div>
+                <div class="spec"><dt>Source</dt><dd class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-steel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-lock"/></svg>
+                    Private (client work)
+                </dd></div>
+            </dl>
         </div>
-        
-        <ul class="flex items-center">
-            <li>
-                <a href="index.html" class="magnetic-btn font-label-caps text-[12px] tracking-[1.5px] font-bold text-brand-black hover:text-brand-red transition-colors border border-brand-black/20 px-6 py-2 rounded-full hover:bg-brand-red/5">
-                    ← BACK TO MAIN
-                </a>
+        <div class="lg:col-span-5 reveal" style="transition-delay:150ms">
+            <div class="phone max-w-[280px] mx-auto">
+                <video class="w-full rounded-[22px] block" src="assets/splash-screen.mp4" autoplay muted loop playsinline aria-label="VICXIEN Votes splash screen animation"></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW A VOTE IS CAST -->
+    <section class="container-x py-16 md:py-24" aria-labelledby="flow-title">
+        <div class="mb-12 reveal">
+            <p class="eyebrow mb-3">01 / The voting path</p>
+            <h2 id="flow-title" class="font-display text-[32px] md:text-[40px] font-semibold tracking-tight mb-4">Four checks between a tap and a counted vote</h2>
+            <p class="text-ink/70 leading-relaxed max-w-2xl">Each step closes a specific way people cheat in student elections: borrowing a friend's login, voting from someone else's phone, or tapping submit twice.</p>
+        </div>
+
+        <ol class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-black/[0.08] rounded-card overflow-hidden border border-black/[0.08]">
+            <li class="bg-paper p-8 flex flex-col gap-4 reveal">
+                <p class="font-mono text-[12px] text-brand">Step 1</p>
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-finger"/></svg>
+                <h3 class="font-display text-[20px] font-semibold">Prove it's you</h3>
+                <p class="text-ink/70 text-[15px] leading-relaxed">Before the ballot opens, the phone asks for the student's fingerprint, face or screen lock. A phone with no lock set up can't vote at all.</p>
             </li>
-        </ul>
-    </div>
-</nav>
+            <li class="bg-paper p-8 flex flex-col gap-4 reveal" style="transition-delay:80ms">
+                <p class="font-mono text-[12px] text-brand">Step 2</p>
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg>
+                <h3 class="font-display text-[20px] font-semibold">On your own phone</h3>
+                <p class="text-ink/70 text-[15px] leading-relaxed">Each matric number is bound to one device at registration. Signing in from a different phone doesn't let you vote.</p>
+            </li>
+            <li class="bg-paper p-8 flex flex-col gap-4 reveal" style="transition-delay:160ms">
+                <p class="font-mono text-[12px] text-brand">Step 3</p>
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-lock"/></svg>
+                <h3 class="font-display text-[20px] font-semibold">Exactly once</h3>
+                <p class="text-ink/70 text-[15px] leading-relaxed">The ballot is recorded inside a single Firestore transaction that checks whether this student has already voted in this election. A second attempt, even a double tap, is rejected.</p>
+            </li>
+            <li class="bg-paper p-8 flex flex-col gap-4 reveal" style="transition-delay:240ms">
+                <p class="font-mono text-[12px] text-brand">Step 4</p>
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-receipt"/></svg>
+                <h3 class="font-display text-[20px] font-semibold">Keep a receipt</h3>
+                <p class="text-ink/70 text-[15px] leading-relaxed">The student gets a receipt code built from a SHA-256 hash of the vote, and the same code goes into the election's audit trail, so a disputed ballot can be checked later.</p>
+            </li>
+        </ol>
 
-<main class="pt-[150px] pb-32 px-6 max-w-[1200px] mx-auto">
-    
-    <!-- Header -->
-    <div class="text-center mb-24 reveal-item">
-        <div class="inline-flex items-center gap-3 px-4 py-1.5 mb-6 rounded-full border border-brand-red/20 bg-brand-red/5">
-            <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
-            <span class="font-label-caps text-[10px] tracking-widest text-brand-red uppercase">Flutter | Firebase</span>
-        </div>
-        <h1 class="font-headline-md text-[40px] md:text-[56px] text-brand-black leading-tight mb-6 font-bold">
-            VICXIEN Votes <span class="text-brand-black/40">Architecture</span>
-        </h1>
-        <p class="font-body-md text-[18px] text-brand-black/70 max-w-2xl mx-auto">
-            A comprehensive look at the user interface and secure voting flow, engineered with Flutter and Firebase for institutional governance.
-        </p>
-    </div>
-
-    <!-- UI Grid -->
-    <h2 class="font-headline-md text-[32px] text-brand-black reveal-item font-bold">Application Interface</h2>
-    <div class="machined-divider reveal-item"></div>
-    
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
-        <!-- Card 1 -->
-        <div class="glass-card rounded-card p-6 reveal-item cursor-pointer" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2" style="transition-delay: 100ms;">
-            <div class="rounded-[12px] overflow-hidden border border-black/5 mb-6 shadow-inner">
-                <img src="assets/sign-in.png" alt="Sign In Screen" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+        <div class="mt-6 card p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 reveal">
+            <div>
+                <p class="eyebrow mb-2">What the student sees after voting</p>
+                <p class="font-mono text-[22px] md:text-[28px] tracking-wider">VX-<span class="text-brand">3F9A1C0B7E2D</span></p>
+                <p class="text-steel text-sm mt-1">Example receipt code</p>
             </div>
-            <p class="text-center font-label-caps text-[12px] text-brand-black tracking-widest font-bold">SECURE SIGN-IN</p>
+            <button class="btn-solid self-start md:self-auto" data-video="assets/voting-process.mp4" data-title="VICXIEN Votes: casting a vote">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                Watch a vote being cast
+            </button>
         </div>
-        
-        <!-- Card 2 -->
-        <div class="glass-card rounded-card p-6 reveal-item cursor-pointer" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2" style="transition-delay: 200ms;">
-            <div class="rounded-[12px] overflow-hidden border border-black/5 mb-6 shadow-inner">
-                <img src="assets/sign-up.png" alt="Sign Up Screen" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
-            </div>
-            <p class="text-center font-label-caps text-[12px] text-brand-black tracking-widest font-bold">REGISTRATION FLOW</p>
-        </div>
+    </section>
 
-        <!-- Card 3 -->
-        <div class="glass-card rounded-card p-6 reveal-item cursor-pointer" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2" style="transition-delay: 300ms;">
-            <div class="rounded-[12px] overflow-hidden border border-black/5 mb-6 shadow-inner">
-                <img src="assets/dashboard.png" alt="Main Dashboard" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
-            </div>
-            <p class="text-center font-label-caps text-[12px] text-brand-black tracking-widest font-bold">USER DASHBOARD</p>
+    <!-- SCREENS -->
+    <section class="container-x py-16 md:py-24" aria-labelledby="screens-title">
+        <div class="mb-12 reveal">
+            <p class="eyebrow mb-3">02 / Student side</p>
+            <h2 id="screens-title" class="font-display text-[32px] md:text-[40px] font-semibold tracking-tight">The screens students use</h2>
         </div>
-
-        <!-- Card 4 -->
-        <div class="glass-card rounded-card p-6 reveal-item cursor-pointer" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2" style="transition-delay: 400ms;">
-            <div class="rounded-[12px] overflow-hidden border border-black/5 mb-6 shadow-inner">
-                <img src="assets/notifications.png" alt="Notifications" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
-            </div>
-            <p class="text-center font-label-caps text-[12px] text-brand-black tracking-widest font-bold">LIVE NOTIFICATIONS</p>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8">
+            <figure class="reveal">
+                <div class="phone"><img src="assets/sign-up.png" alt="Registration screen" loading="lazy" width="558" height="1280"></div>
+                <figcaption class="mt-4"><p class="eyebrow">Register</p><p class="text-sm text-ink/70 mt-1">Matric number, password and device binding in one step.</p></figcaption>
+            </figure>
+            <figure class="reveal" style="transition-delay:80ms">
+                <div class="phone"><img src="assets/sign-in.png" alt="Sign-in screen" loading="lazy" width="558" height="1280"></div>
+                <figcaption class="mt-4"><p class="eyebrow">Sign in</p><p class="text-sm text-ink/70 mt-1">Passwords are stored as salted PBKDF2 hashes, never as text.</p></figcaption>
+            </figure>
+            <figure class="reveal" style="transition-delay:160ms">
+                <div class="phone"><img src="assets/dashboard.png" alt="Dashboard listing elections" loading="lazy" width="558" height="1280"></div>
+                <figcaption class="mt-4"><p class="eyebrow">Dashboard</p><p class="text-sm text-ink/70 mt-1">Open elections, a countdown to closing, and the candidates.</p></figcaption>
+            </figure>
+            <figure class="reveal" style="transition-delay:240ms">
+                <div class="phone"><img src="assets/notifications.png" alt="Notifications inbox" loading="lazy" width="558" height="1280"></div>
+                <figcaption class="mt-4"><p class="eyebrow">Inbox</p><p class="text-sm text-ink/70 mt-1">Push notifications and an inbox for verification and election updates.</p></figcaption>
+            </figure>
         </div>
-    </div>
+    </section>
 
-    <!-- Videos -->
-    <h2 class="font-headline-md text-[32px] text-brand-black reveal-item font-bold">System Demonstrations</h2>
-    <div class="machined-divider reveal-item"></div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="glass-card rounded-[30px] p-8 text-center reveal-item" style="transition-delay: 100ms;">
-            <h3 class="font-headline-md text-[20px] text-brand-black mb-6 font-bold">App Initialization Flow</h3>
-            <div class="rounded-[16px] overflow-hidden border border-black/10 bg-black">
-                <video class="w-full h-auto" autoplay loop muted playsinline>
-                    <source src="assets/splash-screen.mp4" type="video/mp4">
-                </video>
+    <!-- ADMIN -->
+    <section class="border-y border-black/[0.06] py-16 md:py-24" aria-labelledby="admin-title">
+        <div class="container-x">
+            <div class="mb-12 reveal">
+                <p class="eyebrow mb-3">03 / Electoral committee side</p>
+                <h2 id="admin-title" class="font-display text-[32px] md:text-[40px] font-semibold tracking-tight mb-4">Running the election, not just the ballot</h2>
+                <p class="text-ink/70 leading-relaxed max-w-2xl">The committee runs everything from inside the app, so nobody needs a developer on election day.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="card p-7 reveal">
+                    <svg class="w-6 h-6 text-brand mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-clock"/></svg>
+                    <h3 class="font-display text-[18px] font-semibold mb-2">Election setup</h3>
+                    <p class="text-ink/70 text-[15px] leading-relaxed">Create an election, set when it opens and closes, and add candidates with photos for each post.</p>
+                </div>
+                <div class="card p-7 reveal" style="transition-delay:60ms">
+                    <svg class="w-6 h-6 text-brand mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-users"/></svg>
+                    <h3 class="font-display text-[18px] font-semibold mb-2">Voter register</h3>
+                    <p class="text-ink/70 text-[15px] leading-relaxed">Import eligible students from a CSV file and manage who can vote.</p>
+                </div>
+                <div class="card p-7 reveal" style="transition-delay:120ms">
+                    <svg class="w-6 h-6 text-brand mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-chart"/></svg>
+                    <h3 class="font-display text-[18px] font-semibold mb-2">Live results</h3>
+                    <p class="text-ink/70 text-[15px] leading-relaxed">Results and turnout charts update while voting is still open.</p>
+                </div>
+                <div class="card p-7 reveal">
+                    <svg class="w-6 h-6 text-brand mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-list"/></svg>
+                    <h3 class="font-display text-[18px] font-semibold mb-2">Audit log</h3>
+                    <p class="text-ink/70 text-[15px] leading-relaxed">Every ballot is logged, and a live ticker shows each one arriving as a hash code and timestamp, never as a name.</p>
+                </div>
+                <div class="card p-7 reveal" style="transition-delay:60ms">
+                    <svg class="w-6 h-6 text-brand mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-file"/></svg>
+                    <h3 class="font-display text-[18px] font-semibold mb-2">PDF report</h3>
+                    <p class="text-ink/70 text-[15px] leading-relaxed">One tap produces a printable result sheet, grouped by post and ranked by votes, with the audit trail at the bottom.</p>
+                </div>
+                <div class="card p-7 reveal" style="transition-delay:120ms">
+                    <svg class="w-6 h-6 text-brand mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-key"/></svg>
+                    <h3 class="font-display text-[18px] font-semibold mb-2">Remote admin lock</h3>
+                    <p class="text-ink/70 text-[15px] leading-relaxed">The admin PIN lives in Firestore, so it can be changed remotely without shipping a new version of the app.</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="glass-card rounded-[30px] p-8 text-center reveal-item" style="transition-delay: 200ms;">
-            <h3 class="font-headline-md text-[20px] text-brand-black mb-6 font-bold">Secure Voting Architecture</h3>
-            <div class="rounded-[16px] overflow-hidden border border-black/10 bg-black">
-                <video class="w-full h-auto" controls>
-                    <source src="assets/voting-process.mp4" type="video/mp4">
-                </video>
+    <!-- NEXT -->
+    <section class="container-x py-24">
+        <div class="card px-6 py-14 md:px-16 md:py-16 flex flex-col md:flex-row md:items-center justify-between gap-8 reveal">
+            <div>
+                <p class="eyebrow mb-3">Need something like this?</p>
+                <h2 class="font-display text-[28px] md:text-[40px] font-bold tracking-tight leading-tight">Elections, registrations, anything that has to be fair and on the record.</h2>
             </div>
+            <a class="btn-solid shrink-0" href="index.html#contact">
+                Let's talk
+                <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg>
+            </a>
         </div>
-    </div>
+    </section>
 </main>
 
-<footer class="border-t border-black/10 py-16 text-center">
-    <p class="font-label-caps text-[12px] text-brand-black/50 uppercase tracking-widest">
-        &copy; 2026 Ayomide Sobukonla. Engineered with precision.
-    </p>
+<footer class="border-t border-black/10 py-10">
+    <div class="container-x flex flex-col md:flex-row justify-between gap-4 font-mono text-[12px] uppercase tracking-[0.14em] text-steel">
+        <p>&copy; <span id="year">2026</span> Ayomide Sobukonla</p>
+        <a class="hover:text-brand transition-colors" href="index.html">Back to portfolio</a>
+    </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<dialog id="video-dialog" class="w-[min(92vw,420px)] p-0 rounded-card bg-ink text-paper backdrop:bg-black/70">
+    <div class="flex items-center justify-between px-5 py-3">
+        <p id="video-title" class="font-mono text-[12px] uppercase tracking-[0.14em]"></p>
+        <button id="video-close" class="p-1" aria-label="Close video">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+    </div>
+    <video id="video-el" class="w-full block" controls playsinline preload="none"></video>
+</dialog>
+
 <script>
-    const magneticBtns = document.querySelectorAll('.magnetic-btn');
-    magneticBtns.forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-        });
-        btn.addEventListener('mouseleave', () => btn.style.transform = `translate(0px, 0px)`);
-    });
+    (function () {
+        const items = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) {
+            items.forEach(el => el.classList.add('is-in'));
+            return;
+        }
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        items.forEach(el => io.observe(el));
+    })();
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
+    (function () {
+        const dialog = document.getElementById('video-dialog');
+        const video = document.getElementById('video-el');
+        const title = document.getElementById('video-title');
+        document.querySelectorAll('[data-video]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (video.getAttribute('src') !== btn.dataset.video) video.src = btn.dataset.video;
+                title.textContent = btn.dataset.title;
+                dialog.showModal();
+                video.play().catch(() => {});
+            });
         });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal-item').forEach(el => observer.observe(el));
+        document.getElementById('video-close').addEventListener('click', () => dialog.close());
+        dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+        dialog.addEventListener('close', () => video.pause());
+        document.getElementById('year').textContent = new Date().getFullYear();
+    })();
 </script>
-
 </body>
 </html>

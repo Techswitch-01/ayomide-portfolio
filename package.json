@@ -1,0 +1,24 @@
+{
+  "name": "ayomide-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Ayomide Sobukonla",
+  "scripts": {
+    "build": "tailwindcss -i src/input.css -o assets/css/site.css --minify",
+    "dev": "tailwindcss -i src/input.css -o assets/css/site.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Techswitch-01/ayomide-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Techswitch-01/ayomide-portfolio/issues"
+  },
+  "homepage": "https://github.com/Techswitch-01/ayomide-portfolio#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  },
+  "private": true
+}
