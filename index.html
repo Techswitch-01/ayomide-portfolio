@@ -9,8 +9,9 @@
     <title>Ayomide Sobukonla | Systems Engineer: Software & Automotive</title>
     <meta name="description" content="Ayomide Sobukonla builds Flutter and Firebase apps and client websites, and does hands-on automotive work: diagnostics, repair and CNG conversion.">
     <link rel="canonical" href="https://sobukonla-ayomide.netlify.app/">
-    <meta name="theme-color" content="#f4f4f5">
-    <link rel="icon" type="image/jpeg" href="assets/ayomide-sobukonla-ceo-vicxien-corp.jpg">
+    <meta name="theme-color" content="#07070b">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo-mark.svg">
+    <link rel="alternate icon" type="image/jpeg" href="/assets/ayomide-sobukonla-ceo-vicxien-corp.jpg">
     <meta name="google-site-verification" content="g7SDq61nThEIU3igAz2SJySW4iktN8Vs8BCLxvTZIsU" />
 
     <!-- Link previews (LinkedIn, WhatsApp, X) -->
@@ -45,297 +46,284 @@
       ]
     }
     </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="selection:bg-brand selection:text-white">
+<body>
 
-<!-- Icon sprite (Lucide, ISC licence) -->
+<!-- Icon sprite: pixelarticons by Gerrit Halfmann (MIT), github.com/halfmage/pixelarticons -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
     <defs>
-        <g id="i-arrow"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></g>
-        <g id="i-out"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></g>
-        <g id="i-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></g>
-        <g id="i-copy"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></g>
-        <g id="i-check"><path d="M20 6 9 17l-5-5"/></g>
-        <g id="i-play"><polygon points="6 3 20 12 6 21 6 3"/></g>
-        <g id="i-lock"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g>
-        <g id="i-menu"><path d="M4 6h16M4 12h16M4 18h16"/></g>
-        <g id="i-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></g>
-        <g id="i-phone"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></g>
-        <g id="i-cpu"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></g>
-        <g id="i-wrench"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></g>
-        <g id="i-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></g>
-        <g id="i-award"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></g>
-        <g id="i-file"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></g>
-        <g id="i-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></g>
-        <g id="i-pen"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></g>
-        <g id="i-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></g>
-        <g id="i-clock"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g>
+        <g id="i-arrow"><path d="M4 11v2h16v-2zm12 2v2h2v-2zm-2 2v2h2v-2zm-2 2v2h2v-2zm4-6V9h2v2z"/><path d="M14 15V7h2v8zm-2 2V5h2v12z"/></g>
+        <g id="i-down"><path d="M13 12h6v2h-2v2h-2v2h-2v2h-2v-2H9v-2H7v-2H5v-2h6V4h2v8Z"/></g>
+        <g id="i-out"><path d="M11 5H5v2h6V5ZM5 7H3v12h2V7Zm12 12H5v2h12v-2Zm2-6h-2v6h2v-6Zm-8 0H9v2h2v-2Zm2-2h-2v2h2v-2Zm2-2h-2v2h2V9Zm2-2h-2v2h2V7Zm2-2h-2v2h2V5Zm2-2h-2v8h2V3Z"/><path d="M21 3h-8v2h8V3Z"/></g>
+        <g id="i-mail"><path d="M6 8h2v2H6zm2 2h2v2H8zm10-2h-2v2h2zm-2 2h-2v2h2zm-6 2h4v2h-4zM2 6h2v12H2zm18 0h2v12h-2zM4 4h16v2H4zm0 14h16v2H4z"/></g>
+        <g id="i-copy"><path d="M8 6h12v2H8zM4 2h12v2H4zm2 6h2v12H6zM2 4h2v12H2zm6 16h12v2H8zM20 8h2v12h-2zm-4-4h2v2h-2zM4 16h2v2H4z"/></g>
+        <g id="i-check"><path d="M10 18H8v-2h2v2Zm-2-2H6v-2h2v2Zm4-2v2h-2v-2h2Zm-6 0H4v-2h2v2Zm8 0h-2v-2h2v2Zm2-2h-2v-2h2v2Zm2-2h-2V8h2v2Zm2-2h-2V6h2v2Z"/></g>
+        <g id="i-play"><path d="M15 11h-2V9h2zm0 4h-2v-2h2zm-2 2h-2v-2h2zm0-8h-2V7h2zm-2-2H9V5h2zM9 21H7V3h2zm6-8h2v-2h-2zm-6 4h2v2H9z"/></g>
+        <g id="i-x"><path d="M7 19H5V17H7V19ZM19 19H17V17H19V19ZM9 15V17H7V15H9ZM17 17H15V15H17V17ZM11 15H9V13H11V15ZM15 15H13V13H15V15ZM13 13H11V11H13V13ZM11 11H9V9H11V11ZM15 11H13V9H15V11ZM9 9H7V7H9V9ZM17 9H15V7H17V9ZM7 7H5V5H7V7ZM19 7H17V5H19V7Z"/></g>
+        <g id="i-menu"><path d="M20 18H4v-2h16v2Zm0-5H4v-2h16v2Zm0-5H4V6h16v2Z"/></g>
+        <g id="i-lock"><path d="M5 8h14v2H5zm0 12h14v2H5zM3 10h2v10H3zm16 0h2v10h-2zM7 4h2v4H7zm2-2h6v2H9zm6 2h2v4h-2z"/></g>
+        <g id="i-clock"><path d="M6 2h12v2H6zM2 6h2v12H2zm18 0h2v12h-2zm-2-2h2v2h-2zM4 4h2v2H4zm2 18h12v-2H6zm12-2h2v-2h-2zM4 20h2v-2H4zm7-14h2v7h-2zm2 7h2v2h-2zm2 2h2v2h-2z"/></g>
+        <g id="i-file"><path d="M6 4H4v16h2zm10-2H6v2h10zm4 4h-2v14h2zm-2 14H6v2h12zM16 4h2v2h-2zm-4 0h2v6h-2z"/><path d="M12 8h6v2h-6z"/></g>
     </defs>
 </svg>
 
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-ink focus:text-paper focus:px-4 focus:py-2 focus:rounded-md">Skip to content</a>
+<!-- The 3D world (React Three Fiber) mounts here, fixed behind the page -->
+<div id="world" aria-hidden="true"></div>
+<div class="veil" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
-<header class="fixed top-0 inset-x-0 z-50 bg-paper/85 backdrop-blur-xl border-b border-black/[0.08]">
-    <nav class="container-x flex items-center justify-between h-[72px]" aria-label="Main">
-        <a href="#top" class="font-display text-2xl font-bold tracking-tighter"><span class="text-brand">Ayo</span>mide.</a>
+<a href="#main" class="skip">Skip to content</a>
 
-        <div class="hidden md:flex items-center gap-8">
-            <ul class="flex items-center gap-8 font-mono text-[12px] uppercase tracking-[0.14em] text-steel">
-                <li><a class="hover:text-ink transition-colors" href="#services">Services</a></li>
-                <li><a class="hover:text-ink transition-colors" href="#work">Work</a></li>
-                <li><a class="hover:text-ink transition-colors" href="#experience">Experience</a></li>
-                <li><a class="hover:text-ink transition-colors" href="#background">Background</a></li>
-            </ul>
-            <a class="btn-solid !py-2.5 !px-5 !text-[14px]" href="#contact">Let's talk</a>
-        </div>
+<header class="nav-wrap">
+    <nav class="nav" data-glass data-glass-radius="999" aria-label="Main">
+        <a href="#top" class="nav-brand" aria-label="Ayomide Sobukonla, back to top">
+            <span class="liquid-logo liquid-logo--nav" data-liquid-logo><img src="/assets/logo-mark.svg" alt=""></span>
+            <span class="nav-name">Ayomide</span>
+        </a>
 
-        <button id="menu-btn" class="md:hidden p-2 -mr-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><use href="#i-menu"/></svg>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#lab">Side projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#life">Off the clock</a></li>
+        </ul>
+
+        <a class="btn btn-solid btn-sm nav-cta" href="#contact">Let's talk</a>
+
+        <button id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="i" viewBox="0 0 24 24"><use href="#i-menu"/></svg>
         </button>
     </nav>
 
-    <ul id="mobile-menu" hidden class="md:hidden border-t border-black/[0.08] bg-paper px-5 py-4 space-y-1 font-mono text-[13px] uppercase tracking-[0.14em]">
-        <li><a class="block py-3" href="#services">Services</a></li>
-        <li><a class="block py-3" href="#work">Work</a></li>
-        <li><a class="block py-3" href="#experience">Experience</a></li>
-        <li><a class="block py-3" href="#background">Background</a></li>
-        <li><a class="block py-3" href="#contact">Contact</a></li>
+    <ul id="mobile-menu" class="mobile-menu" hidden>
+        <li><a href="#services"><span>01</span>Services</a></li>
+        <li><a href="#work"><span>02</span>Work</a></li>
+        <li><a href="#lab"><span>03</span>Side projects</a></li>
+        <li><a href="#experience"><span>04</span>Experience</a></li>
+        <li><a href="#background"><span>05</span>Background</a></li>
+        <li><a href="#life"><span>06</span>Off the clock</a></li>
+        <li><a href="#contact"><span>07</span>Contact</a></li>
     </ul>
 </header>
 
-<main id="main" class="pt-[72px]">
+<!-- Chapter gauge: shows where you are in the page -->
+<aside class="gauge" aria-hidden="true">
+    <span class="gauge-num" id="gauge-num">00</span>
+    <span class="gauge-track"><span class="gauge-fill" id="gauge-fill"></span></span>
+    <span class="gauge-label" id="gauge-label">Intro</span>
+</aside>
+
+<main id="main">
 
     <!-- HERO -->
-    <section id="top" class="relative overflow-hidden">
-        <canvas id="hero-canvas" class="absolute inset-0 w-full h-full opacity-30 pointer-events-none hidden md:block" aria-hidden="true"></canvas>
+    <section id="top" class="hero" data-chapter="0" data-chapter-label="Intro">
+        <div class="wrap hero-grid">
+            <p class="tag hero-tag reveal">
+                <img class="hero-avatar" src="/assets/ayomide-sobukonla-ceo-vicxien-corp.jpg" alt="Portrait of Ayomide Sobukonla" width="80" height="80">
+                <span>Ayomide Sobukonla <i>/</i> Systems engineer <i>/</i> Nigeria</span>
+            </p>
 
-        <div class="container-x relative grid md:grid-cols-12 gap-12 items-center min-h-[88vh] py-16">
-            <div class="md:col-span-7 space-y-7 reveal">
-                <p class="eyebrow flex items-center gap-2.5">
-                    <span class="w-2 h-2 rounded-full bg-brand"></span>
-                    Ayomide Sobukonla · Systems engineer · Nigeria
-                </p>
-                <h1 class="font-display font-bold text-[44px] leading-[1.05] md:text-[64px] tracking-tight">
-                    You've got the idea.<br>
-                    <span class="text-brand">I make it real, and make it stand out.</span>
-                </h1>
-                <p class="text-lg leading-relaxed text-ink/75 max-w-xl">
+            <h1 class="hero-title">
+                <span class="line reveal"><span>You've got the idea.</span></span>
+                <span class="line reveal"><span>I make it <em>real,</em></span></span>
+                <span class="line reveal"><span>and make it <em>stand out.</em></span></span>
+            </h1>
+
+            <div class="hero-foot">
+                <p class="hero-lede reveal">
                     I design and build apps, websites, logos and the SEO that gets them found. Off the screen I work on engines, RC builds and CNG conversion, so I build software like an engineer: it has to hold up in the real world.
                 </p>
-                <div class="flex flex-wrap gap-4 pt-2">
-                    <a class="btn-solid" href="#work">
+                <div class="hero-actions reveal">
+                    <a class="btn btn-solid" href="#work">
                         See my work
-                        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg>
+                        <svg class="i" viewBox="0 0 24 24"><use href="#i-arrow"/></svg>
                     </a>
-                    <a class="btn-line" href="#services">What I can do for you</a>
-                </div>
-                <div class="flex gap-6 pt-2 font-mono text-[12px] uppercase tracking-[0.14em]">
-                    <a href="https://github.com/Techswitch-01" target="_blank" rel="noopener" class="flex items-center gap-2 text-steel hover:text-brand transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/sobukonla-ayomide-061712289" target="_blank" rel="noopener" class="flex items-center gap-2 text-steel hover:text-brand transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        LinkedIn
-                    </a>
+                    <a class="btn btn-glass" data-glass href="#services">What I can do for you</a>
                 </div>
             </div>
 
-            <div class="md:col-span-5 relative reveal" style="transition-delay:150ms">
-                <div class="card p-2 group">
-                    <img src="assets/ayomide-sobukonla-ceo-vicxien-corp.jpg" alt="Portrait of Ayomide Sobukonla"
-                         class="w-full aspect-square object-cover rounded-[14px] md:grayscale md:group-hover:grayscale-0 transition-[filter] duration-700" width="600" height="600">
+            <dl class="readout reveal" data-glass data-glass-radius="18">
+                <div><dt>Now</dt><dd>Lead IT, Aftak Impact Ops</dd></div>
+                <div><dt>Build</dt><dd>Apps · Web · Brand · SEO</dd></div>
+                <div><dt>Garage</dt><dd>Diagnostics · CNG</dd></div>
+                <div class="readout-links">
+                    <dt>Find me</dt>
+                    <dd>
+                        <a href="https://github.com/Techswitch-01" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/sobukonla-ayomide-061712289" target="_blank" rel="noopener">LinkedIn</a>
+                    </dd>
                 </div>
+            </dl>
 
-                <!-- Spec plate -->
-                <dl class="card absolute -bottom-8 left-4 right-4 md:-left-8 md:right-auto md:w-[300px] px-5 py-3 border-l-4 !border-l-brand">
-                    <div class="spec !border-t-0"><dt>Now</dt><dd>Lead IT, Aftak Impact Ops</dd></div>
-                    <div class="spec"><dt>Build</dt><dd>Apps · Web · Brand · SEO</dd></div>
-                    <div class="spec"><dt>Garage</dt><dd>Diagnostics · CNG</dd></div>
-                </dl>
-            </div>
+            <a class="scroll-cue" href="#services">
+                <svg class="i" viewBox="0 0 24 24"><use href="#i-down"/></svg>
+                Scroll
+            </a>
         </div>
     </section>
 
     <!-- MARQUEE -->
-    <div class="marquee overflow-hidden border-y border-black/[0.08] py-5 bg-white/50" aria-hidden="true">
-        <div class="marquee-track font-display text-[22px] md:text-[28px] font-semibold tracking-tight whitespace-nowrap">
-            <span class="flex gap-10 pr-10">
-                <span>App design</span><span class="text-brand">✦</span><span>Websites</span><span class="text-brand">✦</span><span>Logos &amp; brand</span><span class="text-brand">✦</span><span>SEO</span><span class="text-brand">✦</span><span>Flutter</span><span class="text-brand">✦</span><span>Firebase</span><span class="text-brand">✦</span><span>RC builds</span><span class="text-brand">✦</span><span>CNG conversion</span><span class="text-brand">✦</span>
-            </span>
-            <span class="flex gap-10 pr-10">
-                <span>App design</span><span class="text-brand">✦</span><span>Websites</span><span class="text-brand">✦</span><span>Logos &amp; brand</span><span class="text-brand">✦</span><span>SEO</span><span class="text-brand">✦</span><span>Flutter</span><span class="text-brand">✦</span><span>Firebase</span><span class="text-brand">✦</span><span>RC builds</span><span class="text-brand">✦</span><span>CNG conversion</span><span class="text-brand">✦</span>
-            </span>
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>App design <b>✶</b> Websites <b>✶</b> <em>Logos &amp; brand</em> <b>✶</b> SEO <b>✶</b> Flutter <b>✶</b> Firebase <b>✶</b> <em>RC builds</em> <b>✶</b> CNG conversion <b>✶</b>&nbsp;</span>
+            <span>App design <b>✶</b> Websites <b>✶</b> <em>Logos &amp; brand</em> <b>✶</b> SEO <b>✶</b> Flutter <b>✶</b> Firebase <b>✶</b> <em>RC builds</em> <b>✶</b> CNG conversion <b>✶</b>&nbsp;</span>
         </div>
     </div>
 
     <!-- SERVICES -->
-    <section id="services" class="container-x py-24 md:py-32" aria-labelledby="services-title">
-        <div class="mb-12 grid md:grid-cols-2 gap-6 items-end reveal">
-            <div>
-                <p class="eyebrow mb-3">01 / Services</p>
-                <h2 id="services-title" class="font-display text-[32px] md:text-[40px] font-semibold tracking-tight">What I can do for you</h2>
-            </div>
-            <p class="text-ink/70 leading-relaxed md:text-right">From the first sketch of a logo to the app on your customer's phone, one person owns the whole thing, so nothing gets lost between designer, developer and marketer.</p>
-        </div>
+    <section id="services" class="section wrap" data-chapter="1" data-chapter-label="Services" aria-labelledby="services-title">
+        <header class="section-head reveal">
+            <p class="tag">01 <i>/</i> Services</p>
+            <h2 id="services-title" class="section-title">What I can do <em>for you</em></h2>
+            <p class="section-note">From the first sketch of a logo to the app on your customer's phone, one person owns the whole thing, so nothing gets lost between designer, developer and marketer.</p>
+        </header>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/[0.08] rounded-card overflow-hidden border border-black/[0.08]">
-            <article class="bg-paper hover:bg-white transition-colors p-8 flex flex-col gap-4 reveal">
-                <p class="font-mono text-[12px] text-brand">/01</p>
-                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-phone"/></svg>
-                <h3 class="font-display text-[20px] font-semibold">App design &amp; development</h3>
-                <p class="text-ink/70 text-[15px] leading-relaxed">Mobile apps designed screen by screen and built end to end: sign-in, payments, notifications, light and dark themes, and the backend behind it.</p>
-            </article>
-            <article class="bg-paper hover:bg-white transition-colors p-8 flex flex-col gap-4 reveal" style="transition-delay:80ms">
-                <p class="font-mono text-[12px] text-brand">/02</p>
-                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-globe"/></svg>
-                <h3 class="font-display text-[20px] font-semibold">Websites</h3>
-                <p class="text-ink/70 text-[15px] leading-relaxed">Fast business and brand sites that look right on a phone first, are easy to update, and are deployed and running when we're done.</p>
-            </article>
-            <article class="bg-paper hover:bg-white transition-colors p-8 flex flex-col gap-4 reveal" style="transition-delay:160ms">
-                <p class="font-mono text-[12px] text-brand">/03</p>
-                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-pen"/></svg>
-                <h3 class="font-display text-[20px] font-semibold">Logos &amp; brand identity</h3>
-                <p class="text-ink/70 text-[15px] leading-relaxed">A logo, colours and type that work everywhere they appear: app icon, signboard, Instagram and invoice.</p>
-            </article>
-            <article class="bg-paper hover:bg-white transition-colors p-8 flex flex-col gap-4 reveal" style="transition-delay:240ms">
-                <p class="font-mono text-[12px] text-brand">/04</p>
-                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-search"/></svg>
-                <h3 class="font-display text-[20px] font-semibold">SEO &amp; launch</h3>
-                <p class="text-ink/70 text-[15px] leading-relaxed">Search Console setup, structured data, sitemaps and link previews, so people find you on Google and your links look good when shared.</p>
-            </article>
-        </div>
+        <ol class="services">
+            <li class="service reveal">
+                <span class="service-num">/01</span>
+                <h3>App design &amp; development</h3>
+                <p>Mobile apps designed screen by screen and built end to end: sign-in, payments, notifications, light and dark themes, and the backend behind it.</p>
+            </li>
+            <li class="service reveal">
+                <span class="service-num">/02</span>
+                <h3>Websites</h3>
+                <p>Fast business and brand sites that look right on a phone first, are easy to update, and are deployed and running when we're done.</p>
+            </li>
+            <li class="service reveal">
+                <span class="service-num">/03</span>
+                <h3>Logos &amp; brand identity</h3>
+                <p>A logo, colours and type that work everywhere they appear: app icon, signboard, Instagram and invoice.</p>
+            </li>
+            <li class="service reveal">
+                <span class="service-num">/04</span>
+                <h3>SEO &amp; launch</h3>
+                <p>Search Console setup, structured data, sitemaps and link previews, so people find you on Google and your links look good when shared.</p>
+            </li>
+        </ol>
 
-        <div class="mt-6 card p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-5 reveal">
-            <div class="flex items-center gap-3 shrink-0">
-                <svg class="w-6 h-6 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-wrench"/></svg>
-                <p class="font-display text-[18px] font-semibold">Also on the workbench</p>
-            </div>
-            <ul class="flex flex-wrap gap-2">
+        <div class="workbench reveal">
+            <p class="tag">Also on the workbench</p>
+            <ul class="chips">
                 <li class="chip">Engine diagnostics</li>
                 <li class="chip">CNG conversion</li>
                 <li class="chip">RC vehicles</li>
-                <li class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/arduino.svg" alt="">Arduino</li>
+                <li class="chip">Arduino</li>
                 <li class="chip">Robotics prototyping</li>
             </ul>
         </div>
     </section>
 
     <!-- WORK -->
-    <section id="work" class="container-x pb-24 md:pb-32" aria-labelledby="work-title">
-        <div class="mb-10 reveal">
-            <p class="eyebrow mb-3">02 / Selected work</p>
-            <h2 id="work-title" class="font-display text-[32px] md:text-[40px] font-semibold tracking-tight mb-8">Things I've built</h2>
-            <div class="flex flex-wrap gap-2" role="group" aria-label="Filter work">
-                <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
-                <button class="filter-btn" data-filter="apps" aria-pressed="false">Apps</button>
-                <button class="filter-btn" data-filter="web" aria-pressed="false">Websites</button>
-                <button class="filter-btn" data-filter="design" aria-pressed="false">UI/UX design</button>
-                <button class="filter-btn" data-filter="hardware" aria-pressed="false">Hardware</button>
+    <section id="work" class="section wrap" data-chapter="2" data-chapter-label="Work" aria-labelledby="work-title">
+        <header class="section-head reveal">
+            <p class="tag">02 <i>/</i> Selected work</p>
+            <h2 id="work-title" class="section-title">Things I've <em>built</em></h2>
+            <div class="filters" role="group" aria-label="Filter work">
+                <button class="pill" data-glass data-filter="all" aria-pressed="true">All</button>
+                <button class="pill" data-glass data-filter="apps" aria-pressed="false">Apps</button>
+                <button class="pill" data-glass data-filter="web" aria-pressed="false">Websites</button>
+                <button class="pill" data-glass data-filter="design" aria-pressed="false">UI/UX design</button>
+                <button class="pill" data-glass data-filter="hardware" aria-pressed="false">Hardware</button>
             </div>
-        </div>
+        </header>
 
-        <div class="space-y-6">
+        <div class="work-list">
             <!-- ErrandGo -->
-            <article data-cat="apps" class="card p-6 md:p-10 grid lg:grid-cols-12 gap-10 reveal">
-                <div class="lg:col-span-5 flex flex-col">
-                    <p class="eyebrow text-brand mb-3">Mobile app · Delivery</p>
-                    <h3 class="font-display text-[32px] font-bold tracking-tight mb-4">ErrandGo</h3>
-                    <p class="text-ink/75 leading-relaxed mb-6">
-                        Everything for the home from one app: gas refills, food, groceries and pharmacy from stores nearby in Mowe, brought by local riders and paid for in the app, never in cash.
+            <article data-cat="apps web" class="panel case reveal">
+                <div class="case-copy">
+                    <p class="tag tag-accent">Mobile app · Website · Delivery</p>
+                    <h3 class="case-title">ErrandGo</h3>
+                    <p class="case-text">
+                        Everything for the home from one app: gas refills, food, groceries and pharmacy from stores nearby in Mowe, brought by local riders and paid for in the app, never in cash. I also built errandgo.ng, the live site that explains Smart Gas, the safety rules for gas deliveries, and signs up stores and riders.
                     </p>
-                    <dl>
-                        <div class="spec"><dt>Stack</dt><dd class="flex flex-wrap gap-2">
-                            <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/flutter.svg" alt="">Flutter</span>
-                            <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/firebase.svg" alt="">Firebase</span>
-                        </dd></div>
-                        <div class="spec"><dt>Ordering</dt><dd>Live order tracking, stage by stage</dd></div>
-                        <div class="spec"><dt>Gas</dt><dd>Cylinder level tracker with one-tap reorder</dd></div>
-                        <div class="spec"><dt>Assistant</dt><dd>ErrandBuddy: “What can I cook with ₦5,000?”</dd></div>
-                        <div class="spec"><dt>Payments</dt><dd>In-app wallet, Google sign-in, biometric app lock</dd></div>
-                        <div class="spec"><dt>Design</dt><dd>Light and dark themes, rider sign-up flow</dd></div>
+                    <dl class="specs">
+                        <div><dt>Stack</dt><dd><span class="chip">Flutter</span><span class="chip">Firebase</span></dd></div>
+                        <div><dt>Ordering</dt><dd>Live order tracking, stage by stage</dd></div>
+                        <div><dt>Gas</dt><dd>Cylinder level tracker with one-tap reorder</dd></div>
+                        <div><dt>Assistant</dt><dd>ErrandBuddy: “What can I cook with ₦5,000?”</dd></div>
+                        <div><dt>Payments</dt><dd>In-app wallet, Google sign-in, biometric app lock</dd></div>
+                        <div><dt>Design</dt><dd>Light and dark themes, rider sign-up flow</dd></div>
+                        <div><dt>Website</dt><dd>errandgo.ng: Smart Gas, safety, stores, riders, FAQ</dd></div>
+                        <div><dt>Status</dt><dd class="with-icon"><span class="live-dot"></span>Live, in beta in Mowe</dd></div>
                     </dl>
+                    <div class="actions">
+                        <a class="btn btn-solid" href="https://errandgo.ng/" target="_blank" rel="noopener">
+                            Visit errandgo.ng
+                            <svg class="i" viewBox="0 0 24 24"><use href="#i-out"/></svg>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="lg:col-span-7 grid grid-cols-3 gap-3 md:gap-5 items-end">
+                <div class="phones">
                     <figure>
-                        <div class="phone"><img src="assets/errandgo/onboarding-light.jpg" alt="ErrandGo onboarding: everything for home, from one app" loading="lazy" width="591" height="1280"></div>
-                        <figcaption class="eyebrow text-center mt-3">Onboarding</figcaption>
+                        <div class="phone"><img src="/assets/errandgo/onboarding-light.jpg" alt="ErrandGo onboarding: everything for home, from one app" loading="lazy" width="591" height="1280"></div>
+                        <figcaption>Onboarding</figcaption>
                     </figure>
-                    <figure class="-translate-y-6">
-                        <div class="phone"><img src="assets/errandgo/home-dark.jpg" alt="ErrandGo home in dark theme, with order tracking and gas level" loading="lazy" width="591" height="1280"></div>
-                        <figcaption class="eyebrow text-center mt-3">Home · dark</figcaption>
+                    <figure class="phone-lift">
+                        <div class="phone"><img src="/assets/errandgo/home-dark.jpg" alt="ErrandGo home in dark theme, with order tracking and gas level" loading="lazy" width="591" height="1280"></div>
+                        <figcaption>Home · dark</figcaption>
                     </figure>
                     <figure>
-                        <div class="phone"><img src="assets/errandgo/home-light.jpg" alt="ErrandGo wallet with balance and order activity" loading="lazy" width="591" height="1280"></div>
-                        <figcaption class="eyebrow text-center mt-3">Wallet</figcaption>
+                        <div class="phone"><img src="/assets/errandgo/home-light.jpg" alt="ErrandGo wallet with balance and order activity" loading="lazy" width="591" height="1280"></div>
+                        <figcaption>Wallet</figcaption>
                     </figure>
                 </div>
             </article>
 
             <!-- VICXIEN Votes -->
-            <article data-cat="apps" class="card p-6 md:p-10 grid lg:grid-cols-12 gap-10 reveal">
-                <div class="lg:col-span-5 flex flex-col">
-                    <p class="eyebrow text-brand mb-3">Mobile app · Vicxien Corp</p>
-                    <h3 class="font-display text-[32px] font-bold tracking-tight mb-4">VICXIEN Votes</h3>
-                    <p class="text-ink/75 leading-relaxed mb-6">
+            <article data-cat="apps" class="panel case reveal">
+                <div class="case-copy">
+                    <p class="tag tag-accent">Mobile app · Vicxien Corp</p>
+                    <h3 class="case-title">VICXIEN Votes</h3>
+                    <p class="case-text">
                         A secure student voting app for McPherson University. Students sign in, see who is standing, cast one ballot, and get live notifications as an election opens and closes. It replaces paper ballots with a single auditable flow.
                     </p>
-                    <dl class="mb-8">
-                        <div class="spec"><dt>Stack</dt><dd class="flex flex-wrap gap-2">
-                            <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/flutter.svg" alt="">Flutter</span>
-                            <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/firebase.svg" alt="">Firebase</span>
-                        </dd></div>
-                        <div class="spec"><dt>Client</dt><dd>McPherson University</dd></div>
-                        <div class="spec"><dt>Source</dt><dd class="flex items-center gap-1.5">
-                            <svg class="w-3.5 h-3.5 text-steel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-lock"/></svg>
-                            Private (client work)
-                        </dd></div>
+                    <dl class="specs">
+                        <div><dt>Stack</dt><dd><span class="chip">Flutter</span><span class="chip">Firebase</span></dd></div>
+                        <div><dt>Client</dt><dd>McPherson University</dd></div>
+                        <div><dt>Source</dt><dd class="with-icon"><svg class="i i-sm" viewBox="0 0 24 24"><use href="#i-lock"/></svg>Private (client work)</dd></div>
                     </dl>
-                    <div class="mt-auto flex flex-wrap gap-3">
-                        <a class="btn-solid" href="vicxien.html">
+                    <div class="actions">
+                        <a class="btn btn-solid" href="/vicxien.html">
                             Read the case study
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg>
+                            <svg class="i" viewBox="0 0 24 24"><use href="#i-arrow"/></svg>
                         </a>
-                        <button class="btn-line" data-video="assets/voting-process.mp4" data-title="VICXIEN Votes: voting flow">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><use href="#i-play"/></svg>
+                        <button class="btn btn-glass" data-glass data-video="/assets/voting-process.mp4" data-title="VICXIEN Votes: voting flow">
+                            <svg class="i" viewBox="0 0 24 24"><use href="#i-play"/></svg>
                             Watch the flow
                         </button>
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 grid grid-cols-3 gap-3 md:gap-5 items-end">
+                <div class="phones">
                     <figure>
-                        <div class="phone"><img src="assets/sign-in.png" alt="VICXIEN Votes sign-in screen" loading="lazy" width="558" height="1280"></div>
-                        <figcaption class="eyebrow text-center mt-3">Sign-in</figcaption>
+                        <div class="phone"><img src="/assets/sign-in.png" alt="VICXIEN Votes sign-in screen" loading="lazy" width="558" height="1280"></div>
+                        <figcaption>Sign-in</figcaption>
                     </figure>
-                    <figure class="-translate-y-6">
-                        <div class="phone"><img src="assets/dashboard.png" alt="VICXIEN Votes dashboard listing elections" loading="lazy" width="558" height="1280"></div>
-                        <figcaption class="eyebrow text-center mt-3">Dashboard</figcaption>
+                    <figure class="phone-lift">
+                        <div class="phone"><img src="/assets/dashboard.png" alt="VICXIEN Votes dashboard listing elections" loading="lazy" width="558" height="1280"></div>
+                        <figcaption>Dashboard</figcaption>
                     </figure>
                     <figure>
-                        <div class="phone"><img src="assets/notifications.png" alt="VICXIEN Votes notifications screen" loading="lazy" width="558" height="1280"></div>
-                        <figcaption class="eyebrow text-center mt-3">Notifications</figcaption>
+                        <div class="phone"><img src="/assets/notifications.png" alt="VICXIEN Votes notifications screen" loading="lazy" width="558" height="1280"></div>
+                        <figcaption>Notifications</figcaption>
                     </figure>
                 </div>
             </article>
 
             <!-- UI/UX design work (live Figma files) -->
-            <div class="grid lg:grid-cols-2 gap-6">
+            <div class="grid-2">
                 <!-- WIDDA -->
-                <article data-cat="design" class="card p-6 md:p-10 flex flex-col reveal">
-                    <div class="rounded-xl overflow-hidden mb-8 border border-black/10" style="background:#0b1730">
-                        <div class="flex items-center justify-between px-5 py-3 border-b border-white/10">
-                            <span class="font-display text-[13px] font-bold text-white tracking-wide">WIDDA</span>
-                            <span class="w-14 h-4 rounded-full" style="background:#14b8b8"></span>
+                <article data-cat="design" class="panel card reveal">
+                    <div class="mock" style="background:#0b1730">
+                        <div class="mock-bar">
+                            <span class="mock-brand">WIDDA</span>
+                            <span class="mock-pill" style="background:#14b8b8"></span>
                         </div>
-                        <div class="relative px-6 py-10 overflow-hidden">
-                            <svg class="absolute -right-6 -top-4 w-44 h-44 opacity-80" viewBox="0 0 200 200" aria-hidden="true">
+                        <div class="mock-body">
+                            <svg class="mock-graph" viewBox="0 0 200 200" aria-hidden="true">
                                 <g stroke="rgba(255,255,255,0.25)" stroke-width="1">
                                     <line x1="100" y1="100" x2="30" y2="40"/><line x1="100" y1="100" x2="175" y2="30"/>
                                     <line x1="100" y1="100" x2="185" y2="140"/><line x1="100" y1="100" x2="60" y2="170"/>
@@ -346,541 +334,412 @@
                                 <circle cx="185" cy="140" r="5" fill="#14b8b8"/><circle cx="60" cy="170" r="5" fill="#ef4444"/>
                                 <circle cx="20" cy="110" r="4" fill="#a78bfa"/>
                             </svg>
-                            <p class="relative font-display text-[26px] leading-[1.1] font-bold text-white max-w-[230px]">From Strategy to <span style="color:#14b8b8">Measurable Performance</span></p>
-                            <span class="relative mt-5 inline-block w-24 h-7 rounded" style="background:#14b8b8"></span>
+                            <p class="mock-headline">From Strategy to <span style="color:#14b8b8">Measurable Performance</span></p>
+                            <span class="mock-cta" style="background:#14b8b8"></span>
                         </div>
                     </div>
-                    <p class="eyebrow text-brand mb-3">UI/UX design · Website</p>
-                    <h3 class="font-display text-[26px] font-bold tracking-tight mb-3">WIDDA</h3>
-                    <p class="text-ink/75 leading-relaxed mb-6">
+                    <p class="tag tag-accent">UI/UX design · Website</p>
+                    <h3 class="card-title">WIDDA</h3>
+                    <p class="case-text">
                         A landing page for a strategy and operations consultancy whose pitch is "we don't just advise, we deliver". Deep navy with a teal accent, built around a four-step delivery process, the sectors they serve and the people behind the work.
                     </p>
-                    <dl class="mb-8">
-                        <div class="spec"><dt>Tool</dt><dd class="flex flex-wrap gap-2"><span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/figma.svg" alt="">Figma</span></dd></div>
-                        <div class="spec"><dt>Sections</dt><dd>Hero, process, sectors, team, call to action</dd></div>
+                    <dl class="specs">
+                        <div><dt>Tool</dt><dd><span class="chip">Figma</span></dd></div>
+                        <div><dt>Sections</dt><dd>Hero, process, sectors, team, call to action</dd></div>
                     </dl>
-                    <button class="btn-solid mt-auto self-start" data-figma="https://embed.figma.com/design/PIFzapaMxOPBCsgxmdPESk/WIDDA?node-id=133-14&amp;embed-host=share" data-title="WIDDA: website design" data-figma-url="https://www.figma.com/design/PIFzapaMxOPBCsgxmdPESk/WIDDA?node-id=133-14">
+                    <button class="btn btn-solid card-action" data-figma="https://embed.figma.com/design/PIFzapaMxOPBCsgxmdPESk/WIDDA?node-id=133-14&amp;embed-host=share" data-title="WIDDA: website design" data-figma-url="https://www.figma.com/design/PIFzapaMxOPBCsgxmdPESk/WIDDA?node-id=133-14">
                         Explore the Figma file
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-out"/></svg>
+                        <svg class="i" viewBox="0 0 24 24"><use href="#i-out"/></svg>
                     </button>
                 </article>
 
                 <!-- Oasis and Oaks -->
-                <article data-cat="design" class="card p-6 md:p-10 flex flex-col reveal" style="transition-delay:100ms">
-                    <div class="rounded-xl overflow-hidden mb-8 border border-black/10 bg-ink">
-                        <img src="assets/designs/oasis-and-oaks.jpg" alt="Overview of the Oasis and Oaks design file: about a dozen website page layouts side by side" class="w-full h-auto block" loading="lazy" width="800" height="321">
+                <article data-cat="design" class="panel card reveal">
+                    <div class="mock">
+                        <img src="/assets/designs/oasis-and-oaks.jpg" alt="Overview of the Oasis and Oaks design file: about a dozen website page layouts side by side" loading="lazy" width="800" height="321">
                     </div>
-                    <p class="eyebrow text-brand mb-3">UI/UX design · Multi-page website</p>
-                    <h3 class="font-display text-[26px] font-bold tracking-tight mb-3">Oasis and Oaks</h3>
-                    <p class="text-ink/75 leading-relaxed mb-6">
+                    <p class="tag tag-accent">UI/UX design · Multi-page website</p>
+                    <h3 class="card-title">Oasis and Oaks</h3>
+                    <p class="case-text">
                         A full website design rather than a single page: the home page explored in three colour directions, then about a dozen inner pages, from content and gallery layouts to detail pages and footers.
                     </p>
-                    <dl class="mb-8">
-                        <div class="spec"><dt>Tool</dt><dd class="flex flex-wrap gap-2"><span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/figma.svg" alt="">Figma</span></dd></div>
-                        <div class="spec"><dt>Scope</dt><dd>Home page in 3 directions, 12+ page layouts</dd></div>
+                    <dl class="specs">
+                        <div><dt>Tool</dt><dd><span class="chip">Figma</span></dd></div>
+                        <div><dt>Scope</dt><dd>Home page in 3 directions, 12+ page layouts</dd></div>
                     </dl>
-                    <button class="btn-solid mt-auto self-start" data-figma="https://embed.figma.com/design/u2H5D0KCWG7uHadVPMAk65/Oasis?embed-host=share" data-title="Oasis and Oaks: website design" data-figma-url="https://www.figma.com/design/u2H5D0KCWG7uHadVPMAk65/Oasis">
+                    <button class="btn btn-solid card-action" data-figma="https://embed.figma.com/design/u2H5D0KCWG7uHadVPMAk65/Oasis?embed-host=share" data-title="Oasis and Oaks: website design" data-figma-url="https://www.figma.com/design/u2H5D0KCWG7uHadVPMAk65/Oasis">
                         Explore the Figma file
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-out"/></svg>
+                        <svg class="i" viewBox="0 0 24 24"><use href="#i-out"/></svg>
                     </button>
                 </article>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-6">
+            <div class="grid-2">
                 <!-- Aftak Impact Ops -->
-                <article data-cat="web" class="card p-6 md:p-10 flex flex-col reveal">
-                    <div class="rounded-xl border border-black/10 overflow-hidden mb-8 bg-white">
-                        <div class="flex items-center gap-1.5 px-3 py-2.5 bg-black/[0.04] border-b border-black/10">
-                            <span class="w-2.5 h-2.5 rounded-full bg-black/15"></span>
-                            <span class="w-2.5 h-2.5 rounded-full bg-black/15"></span>
-                            <span class="w-2.5 h-2.5 rounded-full bg-black/15"></span>
-                            <span class="ml-3 font-mono text-[11px] text-steel truncate">aftakimpactops.netlify.app</span>
-                        </div>
-                        <div class="px-6 py-10 flex items-center gap-5">
-                            <img src="assets/aftak.png" alt="Aftak Impact Ops logo" class="h-12 w-auto rounded" loading="lazy">
-                            <p class="font-display text-lg font-semibold leading-snug">Strategic Operations<br>&amp; Execution</p>
+                <article data-cat="web" class="panel card reveal">
+                    <div class="mock mock-browser mock-light">
+                        <div class="mock-chrome"><i></i><i></i><i></i><span>aftakimpactops.netlify.app</span></div>
+                        <div class="mock-site">
+                            <img src="/assets/aftak.png" alt="Aftak Impact Ops logo" loading="lazy">
+                            <p>Strategic Operations<br>&amp; Execution</p>
                         </div>
                     </div>
-                    <p class="eyebrow text-brand mb-3">Client website · SEO</p>
-                    <h3 class="font-display text-[26px] font-bold tracking-tight mb-3">Aftak Impact Ops</h3>
-                    <p class="text-ink/75 leading-relaxed mb-6">
+                    <p class="tag tag-accent">Client website · SEO</p>
+                    <h3 class="card-title">Aftak Impact Ops</h3>
+                    <p class="case-text">
                         The public site for a firm that helps foundations, NGOs, public agencies and growing SMEs turn strategy into execution. I handled it end to end, from design and code to search indexing and launch.
                     </p>
-                    <dl class="mb-8">
-                        <div class="spec"><dt>Stack</dt><dd class="flex flex-wrap gap-2">
-                            <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/html5.svg" alt="">HTML</span>
-                            <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/javascript.svg" alt="">JavaScript</span>
-                            <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/netlify.svg" alt="">Netlify</span>
-                        </dd></div>
-                        <div class="spec"><dt>Search</dt><dd>Verified on Google Search Console</dd></div>
-                        <div class="spec"><dt>Status</dt><dd class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>Live</dd></div>
+                    <dl class="specs">
+                        <div><dt>Stack</dt><dd><span class="chip">HTML</span><span class="chip">JavaScript</span><span class="chip">Netlify</span></dd></div>
+                        <div><dt>Search</dt><dd>Verified on Google Search Console</dd></div>
+                        <div><dt>Status</dt><dd class="with-icon"><span class="live-dot"></span>Live</dd></div>
                     </dl>
-                    <a class="btn-line mt-auto self-start" href="https://aftakimpactops.netlify.app" target="_blank" rel="noopener">
+                    <a class="btn btn-glass card-action" data-glass href="https://aftakimpactops.netlify.app" target="_blank" rel="noopener">
                         Visit the live site
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-out"/></svg>
+                        <svg class="i" viewBox="0 0 24 24"><use href="#i-out"/></svg>
                     </a>
                 </article>
 
                 <!-- Damobeez Hair -->
-                <article data-cat="web" class="card p-6 md:p-10 flex flex-col reveal">
-                    <div class="rounded-xl border border-black/10 overflow-hidden mb-8 bg-ink text-paper">
-                        <div class="flex items-center gap-1.5 px-3 py-2.5 bg-white/[0.06] border-b border-white/10">
-                            <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
-                            <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
-                            <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
-                            <span class="ml-3 font-mono text-[11px] text-white/50 truncate">damobeez-web.web.app</span>
-                        </div>
-                        <div class="px-6 py-8">
-                            <p class="font-display text-lg font-semibold mb-6">Damobeez Hair Luxury</p>
-                            <ol class="grid grid-cols-5 gap-1.5 font-mono text-[9px] uppercase tracking-[0.08em] text-white/60">
-                                <li><span class="block h-1 rounded bg-brand mb-2"></span>Awaiting payment</li>
-                                <li><span class="block h-1 rounded bg-brand mb-2"></span>Confirmed</li>
-                                <li><span class="block h-1 rounded bg-brand mb-2"></span>Processing</li>
-                                <li><span class="block h-1 rounded bg-white/20 mb-2"></span>Shipped</li>
-                                <li><span class="block h-1 rounded bg-white/20 mb-2"></span>Delivered</li>
+                <article data-cat="web" class="panel card reveal">
+                    <div class="mock mock-browser">
+                        <div class="mock-chrome"><i></i><i></i><i></i><span>damobeez-web.web.app</span></div>
+                        <div class="mock-store">
+                            <p>Damobeez Hair Luxury</p>
+                            <ol>
+                                <li class="on">Awaiting payment</li>
+                                <li class="on">Confirmed</li>
+                                <li class="on">Processing</li>
+                                <li>Shipped</li>
+                                <li>Delivered</li>
                             </ol>
                         </div>
                     </div>
-                    <p class="eyebrow text-brand mb-3">E-commerce · Hair &amp; beauty</p>
-                    <h3 class="font-display text-[26px] font-bold tracking-tight mb-3">Damobeez Hair</h3>
-                    <p class="text-ink/75 leading-relaxed mb-6">
+                    <p class="tag tag-accent">E-commerce · Hair &amp; beauty</p>
+                    <h3 class="card-title">Damobeez Hair</h3>
+                    <p class="case-text">
                         An online store for a luxury hair brand: customers browse, add to cart and pay by card, then follow their order from payment to delivery. The owner runs products and orders from an admin dashboard.
                     </p>
-                    <dl class="mb-8">
-                        <div class="spec"><dt>Stack</dt><dd class="flex flex-wrap gap-2">
-                            <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/flutter.svg" alt="">Flutter Web</span>
-                            <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/firebase.svg" alt="">Firebase</span>
-                            <span class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/nodedotjs.svg" alt="">Node.js</span>
-                        </dd></div>
-                        <div class="spec"><dt>Payments</dt><dd>Paystack checkout through a secure server</dd></div>
-                        <div class="spec"><dt>Store</dt><dd>Cart, VIP customer profiles, order tracking</dd></div>
-                        <div class="spec"><dt>Admin</dt><dd>Dashboard for products, photos and orders</dd></div>
+                    <dl class="specs">
+                        <div><dt>Stack</dt><dd><span class="chip">Flutter Web</span><span class="chip">Firebase</span><span class="chip">Node.js</span></dd></div>
+                        <div><dt>Payments</dt><dd>Paystack checkout through a secure server</dd></div>
+                        <div><dt>Store</dt><dd>Cart, VIP customer profiles, order tracking</dd></div>
+                        <div><dt>Admin</dt><dd>Dashboard for products, photos and orders</dd></div>
                     </dl>
-                    <a class="btn-line mt-auto self-start" href="https://damobeez-web.web.app/" target="_blank" rel="noopener">
+                    <a class="btn btn-glass card-action" data-glass href="https://damobeez-web.web.app/" target="_blank" rel="noopener">
                         Visit the store
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-out"/></svg>
+                        <svg class="i" viewBox="0 0 24 24"><use href="#i-out"/></svg>
                     </a>
-                </article>
-
-                <!-- RC vehicle -->
-                <article data-cat="hardware" class="card p-6 md:p-10 lg:col-span-2 grid lg:grid-cols-2 gap-10 items-center reveal" style="transition-delay:100ms">
-                    <div class="blueprint rounded-xl p-4 grid grid-cols-3 gap-3">
-                        <figure>
-                            <button class="block w-full rounded-lg overflow-hidden" data-video="assets/rc/rc-2.mp4" data-title="RC build: Chassis" aria-label="Play clip: Chassis">
-                                <video class="w-full aspect-[9/16] object-cover" src="assets/rc/rc-2.mp4" poster="assets/rc/rc-2.jpg" muted loop playsinline preload="none" data-inview></video>
-                            </button>
-                            <figcaption class="font-mono text-[10px] uppercase tracking-[0.14em] text-white/60 text-center mt-2">Chassis</figcaption>
-                        </figure>
-                        <figure>
-                            <button class="block w-full rounded-lg overflow-hidden" data-video="assets/rc/rc-1.mp4" data-title="RC build: Drive test" aria-label="Play clip: Drive test">
-                                <video class="w-full aspect-[9/16] object-cover" src="assets/rc/rc-1.mp4" poster="assets/rc/rc-1.jpg" muted loop playsinline preload="none" data-inview></video>
-                            </button>
-                            <figcaption class="font-mono text-[10px] uppercase tracking-[0.14em] text-white/60 text-center mt-2">Drive test</figcaption>
-                        </figure>
-                        <figure>
-                            <button class="block w-full rounded-lg overflow-hidden" data-video="assets/rc/rc-3.mp4" data-title="RC build: Lights" aria-label="Play clip: Lights">
-                                <video class="w-full aspect-[9/16] object-cover" src="assets/rc/rc-3.mp4" poster="assets/rc/rc-3.jpg" muted loop playsinline preload="none" data-inview></video>
-                            </button>
-                            <figcaption class="font-mono text-[10px] uppercase tracking-[0.14em] text-white/60 text-center mt-2">Lights</figcaption>
-                        </figure>
-                    </div>
-                    <div class="flex flex-col">
-                    <p class="eyebrow text-brand mb-3">Hardware prototype</p>
-                    <h3 class="font-display text-[26px] font-bold tracking-tight mb-3">Custom RC vehicle &amp; robotics</h3>
-                    <p class="text-ink/75 leading-relaxed mb-6">
-                        A remote-controlled vehicle and robotic system engineered and assembled from bare parts. The hard parts were steering control, getting clean power to the drive, and making the electronics and mechanics behave as one system.
-                    </p>
-                    <dl class="mb-8">
-                        <div class="spec"><dt>Type</dt><dd>Mechatronics, RC systems</dd></div>
-                        <div class="spec"><dt>Build</dt><dd>Hand-built frame, DC drive motor, steering linkage, LED lighting</dd></div>
-                        <div class="spec"><dt>Scope</dt><dd>Design, fabrication, integration, testing</dd></div>
-                    </dl>
-                    <a class="btn-line mt-auto self-start" href="#contact">
-                        Ask me about this build
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg>
-                    </a>
-                    </div>
                 </article>
             </div>
+
+            <!-- RC vehicle -->
+            <article data-cat="hardware" class="panel case case-rc reveal">
+                <div class="rc-reel">
+                    <figure>
+                        <button class="rc-clip" data-video="/assets/rc/rc-2.mp4" data-title="RC build: Chassis" aria-label="Play clip: Chassis">
+                            <video src="/assets/rc/rc-2.mp4" poster="/assets/rc/rc-2.jpg" muted loop playsinline preload="none" data-inview></video>
+                        </button>
+                        <figcaption>Chassis</figcaption>
+                    </figure>
+                    <figure>
+                        <button class="rc-clip" data-video="/assets/rc/rc-1.mp4" data-title="RC build: Drive test" aria-label="Play clip: Drive test">
+                            <video src="/assets/rc/rc-1.mp4" poster="/assets/rc/rc-1.jpg" muted loop playsinline preload="none" data-inview></video>
+                        </button>
+                        <figcaption>Drive test</figcaption>
+                    </figure>
+                    <figure>
+                        <button class="rc-clip" data-video="/assets/rc/rc-3.mp4" data-title="RC build: Lights" aria-label="Play clip: Lights">
+                            <video src="/assets/rc/rc-3.mp4" poster="/assets/rc/rc-3.jpg" muted loop playsinline preload="none" data-inview></video>
+                        </button>
+                        <figcaption>Lights</figcaption>
+                    </figure>
+                </div>
+                <div class="case-copy">
+                    <p class="tag tag-accent">Hardware prototype</p>
+                    <h3 class="case-title">Custom RC vehicle &amp; robotics</h3>
+                    <p class="case-text">
+                        A remote-controlled vehicle and robotic system engineered and assembled from bare parts. The hard parts were steering control, getting clean power to the drive, and making the electronics and mechanics behave as one system.
+                    </p>
+                    <dl class="specs">
+                        <div><dt>Type</dt><dd>Mechatronics, RC systems</dd></div>
+                        <div><dt>Build</dt><dd>Hand-built frame, DC drive motor, steering linkage, LED lighting</dd></div>
+                        <div><dt>Scope</dt><dd>Design, fabrication, integration, testing</dd></div>
+                    </dl>
+                    <div class="actions">
+                        <a class="btn btn-glass" data-glass href="#contact">
+                            Ask me about this build
+                            <svg class="i" viewBox="0 0 24 24"><use href="#i-arrow"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- SIDE PROJECTS -->
+    <section id="lab" class="section wrap" data-chapter="3" data-chapter-label="Side projects" aria-labelledby="lab-title">
+        <header class="section-head reveal">
+            <p class="tag">03 <i>/</i> Side projects</p>
+            <h2 id="lab-title" class="section-title">Open source, <em>from the garage</em></h2>
+            <p class="section-note">Small tools where my software and automotive work meet. All public, all free to use.</p>
+        </header>
+
+        <div class="grid-2">
+            <!-- CNG Payback -->
+            <article class="panel card reveal">
+                <div class="mock mock-pad" style="background:#0f1512;color:#e9f0ec">
+                    <p class="mock-label" style="color:#93a39a">Pays for itself in</p>
+                    <p class="mock-big">12 months</p>
+                    <div class="mock-cells">
+                        <p style="background:#161e1a"><span style="color:#93a39a">Petrol</span><br>₦189,091/mo</p>
+                        <p style="background:#161e1a"><span style="color:#93a39a">You save</span><br><span style="color:#22c55e">₦105,618/mo</span></p>
+                    </div>
+                </div>
+                <p class="tag tag-accent">Web tool · Calculator</p>
+                <h3 class="card-title">CNG Payback</h3>
+                <p class="case-text">
+                    Should you convert your car to CNG? Enter your pump prices, daily distance and conversion cost, and it tells you the monthly saving, how long until the conversion pays for itself, and the month you break even. Results share as a link or straight to WhatsApp.
+                </p>
+                <dl class="specs">
+                    <div><dt>Stack</dt><dd>HTML, CSS, JavaScript, no dependencies</dd></div>
+                    <div><dt>For</dt><dd>Car, SUV, bus and keke drivers</dd></div>
+                </dl>
+                <div class="actions card-action">
+                    <a class="btn btn-solid" href="https://techswitch-01.github.io/cng-payback/" target="_blank" rel="noopener">
+                        Try it
+                        <svg class="i" viewBox="0 0 24 24"><use href="#i-out"/></svg>
+                    </a>
+                    <a class="btn btn-glass" data-glass href="https://github.com/Techswitch-01/cng-payback" target="_blank" rel="noopener">Source</a>
+                </div>
+            </article>
+
+            <!-- OBD Lens -->
+            <article class="panel card reveal">
+                <div class="mock mock-pad" style="background:#0b0c0e;color:#eceef0">
+                    <div class="mock-code">
+                        <span>P0171</span>
+                        <span class="mock-badge">Stored</span>
+                    </div>
+                    <p class="mock-sub">System too lean (Bank 1)</p>
+                    <p class="mock-note"><strong>CNG note</strong> Common on converted cars: check the gas mixture before replacing sensors.</p>
+                </div>
+                <p class="tag tag-accent">Web app · Car diagnostics</p>
+                <h3 class="card-title">OBD Lens</h3>
+                <p class="case-text">
+                    Plug a cheap ELM327 adapter into any modern car and read live engine data and the codes behind a check-engine light, explained in plain English, straight from the browser. There's a simulator for anyone without an adapter.
+                </p>
+                <dl class="specs">
+                    <div><dt>Stack</dt><dd>Web Serial, Web Bluetooth, JavaScript</dd></div>
+                    <div><dt>Talks</dt><dd>ELM327 / OBD-II, CAN and older protocols</dd></div>
+                </dl>
+                <div class="actions card-action">
+                    <a class="btn btn-solid" href="https://techswitch-01.github.io/obd-lens/" target="_blank" rel="noopener">
+                        Try the simulator
+                        <svg class="i" viewBox="0 0 24 24"><use href="#i-out"/></svg>
+                    </a>
+                    <a class="btn btn-glass" data-glass href="https://github.com/Techswitch-01/obd-lens" target="_blank" rel="noopener">Source</a>
+                </div>
+            </article>
         </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="border-y border-black/[0.06] py-24 md:py-32" aria-labelledby="experience-title">
-        <div class="container-x">
-            <div class="mb-12 reveal">
-                <p class="eyebrow mb-3">03 / Experience</p>
-                <h2 id="experience-title" class="font-display text-[32px] md:text-[40px] font-semibold tracking-tight">Where I've worked</h2>
-            </div>
+    <section id="experience" class="section wrap" data-chapter="4" data-chapter-label="Experience" aria-labelledby="experience-title">
+        <header class="section-head reveal">
+            <p class="tag">04 <i>/</i> Experience</p>
+            <h2 id="experience-title" class="section-title">Where I've <em>worked</em></h2>
+        </header>
 
-            <ol class="space-y-4">
-                <li class="card p-6 md:p-8 grid md:grid-cols-[220px_1fr] gap-4 md:gap-10 reveal">
-                    <div class="flex md:flex-col items-center md:items-start gap-3">
-                        <img src="assets/aftak.png" alt="" class="h-10 w-auto rounded" loading="lazy">
-                        <p class="font-mono text-[12px] uppercase tracking-[0.14em] text-steel">Aftak Impact Ops</p>
-                    </div>
-                    <div>
-                        <h3 class="font-display text-[20px] font-semibold mb-2">Lead IT Specialist</h3>
-                        <p class="text-ink/70 leading-relaxed">I run the company's digital infrastructure and brand presence: I designed its web assets, built the site, and set up how changes get deployed.</p>
-                    </div>
-                </li>
-                <li class="card p-6 md:p-8 grid md:grid-cols-[220px_1fr] gap-4 md:gap-10 reveal">
-                    <div class="flex md:flex-col items-center md:items-start gap-3">
-                        <img src="assets/8thgear.png" alt="" class="h-10 w-auto rounded" loading="lazy">
-                        <p class="font-mono text-[12px] uppercase tracking-[0.14em] text-steel">8thGear Hub</p>
-                    </div>
-                    <div>
-                        <h3 class="font-display text-[20px] font-semibold mb-2">IT &amp; Operations Intern</h3>
-                        <p class="text-ink/70 leading-relaxed">Led product design and web development and gave technical advice to small businesses. I onboarded participants onto Development Bank of Nigeria (DBN) programmes, worked on robotics integrations, and built pitch decks for business strategy.</p>
-                    </div>
-                </li>
-                <li class="card p-6 md:p-8 grid md:grid-cols-[220px_1fr] gap-4 md:gap-10 reveal">
-                    <div class="flex md:flex-col items-center md:items-start gap-3">
-                        <img src="assets/haven.png" alt="" class="h-10 w-auto rounded" loading="lazy">
-                        <p class="font-mono text-[12px] uppercase tracking-[0.14em] text-steel">Haven Edu-Services</p>
-                    </div>
-                    <div>
-                        <h3 class="font-display text-[20px] font-semibold mb-2">AI &amp; Robotics Facilitator</h3>
-                        <p class="text-ink/70 leading-relaxed">Taught STEM sessions on AI, robotics and automation. I wrote the lesson plans and walked students through Arduino circuit simulations in Tinkercad.</p>
-                    </div>
-                </li>
-            </ol>
-        </div>
+        <ol class="timeline">
+            <li class="job reveal">
+                <div class="job-org">
+                    <img src="/assets/aftak.png" alt="" loading="lazy">
+                    <p>Aftak Impact Ops</p>
+                </div>
+                <div>
+                    <h3>Lead IT Specialist</h3>
+                    <p>I run the company's digital infrastructure and brand presence: I designed its web assets, built the site, and set up how changes get deployed.</p>
+                </div>
+            </li>
+            <li class="job reveal">
+                <div class="job-org">
+                    <img src="/assets/8thgear.png" alt="" loading="lazy">
+                    <p>8thGear Hub</p>
+                </div>
+                <div>
+                    <h3>IT &amp; Operations Intern</h3>
+                    <p>Led product design and web development and gave technical advice to small businesses. I onboarded participants onto Development Bank of Nigeria (DBN) programmes, worked on robotics integrations, and built pitch decks for business strategy.</p>
+                </div>
+            </li>
+            <li class="job reveal">
+                <div class="job-org">
+                    <img src="/assets/haven.png" alt="" loading="lazy">
+                    <p>Haven Edu-Services</p>
+                </div>
+                <div>
+                    <h3>AI &amp; Robotics Facilitator</h3>
+                    <p>Taught STEM sessions on AI, robotics and automation. I wrote the lesson plans and walked students through Arduino circuit simulations in Tinkercad.</p>
+                </div>
+            </li>
+        </ol>
     </section>
 
     <!-- BACKGROUND -->
-    <section id="background" class="container-x py-24 md:py-32" aria-labelledby="background-title">
-        <div class="mb-12 reveal">
-            <p class="eyebrow mb-3">04 / Background</p>
-            <h2 id="background-title" class="font-display text-[32px] md:text-[40px] font-semibold tracking-tight">Education &amp; training</h2>
-        </div>
+    <section id="background" class="section wrap" data-chapter="5" data-chapter-label="Background" aria-labelledby="background-title">
+        <header class="section-head reveal">
+            <p class="tag">05 <i>/</i> Background</p>
+            <h2 id="background-title" class="section-title">Education <em>&amp; training</em></h2>
+        </header>
 
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="card p-8 reveal">
-                <svg class="w-7 h-7 text-brand mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-cap"/></svg>
-                <p class="eyebrow mb-2">Education</p>
-                <h3 class="font-display text-[20px] font-semibold mb-1">McPherson University</h3>
-                <p class="text-ink/70">COLCOM College of Computing</p>
+        <div class="grid-3">
+            <div class="panel card reveal">
+                <p class="tag">Education · Final year</p>
+                <h3 class="card-title">BSc Information Technology</h3>
+                <p class="case-text">McPherson University, COLCOM College of Computing. Final-year student.</p>
             </div>
 
-            <div class="card p-8 flex flex-col reveal" style="transition-delay:100ms">
-                <svg class="w-7 h-7 text-brand mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-award"/></svg>
-                <p class="eyebrow mb-2">Certificate · September 2026</p>
-                <h3 class="font-display text-[20px] font-semibold mb-1">Generative AI for MSMEs</h3>
-                <p class="text-ink/70 mb-6">Development Bank of Nigeria, Entrepreneurship Training Programme</p>
-                <a class="mt-auto self-start inline-flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.14em] text-ink hover:text-brand transition-colors" href="assets/dbn-ai-certificate.pdf" target="_blank" rel="noopener">
-                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-file"/></svg>
+            <div class="panel card reveal">
+                <p class="tag">Certificate · September 2026</p>
+                <h3 class="card-title">ALX Software Engineering</h3>
+                <p class="case-text">A six-month programme with a specialisation in back-end development. Powered by Holberton.</p>
+                <a class="text-link card-action" href="/assets/alx-software-engineering-certificate.png" target="_blank" rel="noopener">
+                    <svg class="i i-sm" viewBox="0 0 24 24"><use href="#i-file"/></svg>
+                    View certificate
+                </a>
+            </div>
+
+            <div class="panel card reveal">
+                <p class="tag">Certificate · September 2026</p>
+                <h3 class="card-title">Generative AI for MSMEs</h3>
+                <p class="case-text">Development Bank of Nigeria, Entrepreneurship Training Programme</p>
+                <a class="text-link card-action" href="/assets/dbn-ai-certificate.pdf" target="_blank" rel="noopener">
+                    <svg class="i i-sm" viewBox="0 0 24 24"><use href="#i-file"/></svg>
                     View certificate (PDF)
                 </a>
             </div>
         </div>
 
-        <blockquote class="mt-16 max-w-3xl reveal">
-            <p class="font-display text-[26px] md:text-[32px] leading-snug tracking-tight">
-                “Understanding the physical realities of the garage floor drives my approach to engineering smart vehicle software.”
-            </p>
+        <blockquote class="quote reveal">
+            <p>“Understanding the physical realities of the <em>garage floor</em> drives my approach to engineering smart vehicle software.”</p>
         </blockquote>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="container-x pb-24 md:pb-32" aria-labelledby="contact-title">
-        <div class="card px-6 py-14 md:px-16 md:py-20 reveal">
-            <p class="eyebrow mb-3">05 / Contact</p>
-            <h2 id="contact-title" class="font-display text-[36px] md:text-[56px] font-bold tracking-tight leading-tight mb-5">Let's build something.</h2>
-            <p class="text-lg text-ink/75 max-w-xl mb-10">
-                I'm open to internships, freelance builds and any project where software meets physical engineering.
-            </p>
+    <!-- OFF THE CLOCK -->
+    <section id="life" class="section wrap" data-chapter="6" data-chapter-label="Off the clock" aria-labelledby="life-title">
+        <header class="section-head reveal">
+            <p class="tag">06 <i>/</i> Off the clock</p>
+            <h2 id="life-title" class="section-title">When I'm not <em>building</em></h2>
+            <p class="section-note">I'm on the bike, around cars, or deep in something new I'm trying to understand.</p>
+        </header>
 
-            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-10">
-                <a class="btn-solid" href="mailto:sobukonlaolatunbosun1@gmail.com">
-                    <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-mail"/></svg>
-                    sobukonlaolatunbosun1@gmail.com
-                </a>
-                <button id="copy-email" class="btn-line" data-email="sobukonlaolatunbosun1@gmail.com" aria-live="polite">
-                    <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-copy"/></svg>
-                    <span>Copy email</span>
+        <!-- Cycling media: drop files into public/assets/cycling/ with these names.
+             Anything missing is hidden automatically. -->
+        <div class="ride-reel reveal" data-optional-group>
+            <figure data-optional>
+                <button class="ride-clip" data-video="/assets/cycling/ride-1.mp4" data-title="Cycling: on the road" aria-label="Play clip: on the road">
+                    <video src="/assets/cycling/ride-1.mp4" poster="/assets/cycling/ride-1-poster.jpg" muted loop playsinline preload="metadata" data-inview></video>
                 </button>
-            </div>
-
-            <p class="flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.14em] text-steel">
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-clock"/></svg>
-                <span>Local time <span id="local-time">WAT</span> (WAT, UTC+1)</span>
-            </p>
+            </figure>
+            <figure data-optional>
+                <img src="/assets/cycling/ride-1.jpg" alt="Ayomide and the road bike at the Ogun State gateway monument" loading="lazy">
+            </figure>
+            <figure data-optional>
+                <button class="ride-clip" data-video="/assets/cycling/ride-2.mp4" data-title="Cycling: from the handlebars" aria-label="Play clip: from the handlebars">
+                    <video src="/assets/cycling/ride-2.mp4" poster="/assets/cycling/ride-2-poster.jpg" muted loop playsinline preload="metadata" data-inview></video>
+                </button>
+            </figure>
+            <figure data-optional>
+                <img src="/assets/cycling/ride-2.jpg" alt="Ayomide in helmet and jersey, mid-ride" loading="lazy">
+            </figure>
         </div>
+
+        <ul class="interests">
+            <li class="interest reveal">
+                <span class="service-num">/01</span>
+                <h3>Cycling</h3>
+                <p>Long rides to clear my head. The clips and photos above are from the saddle.</p>
+            </li>
+            <li class="interest reveal">
+                <span class="service-num">/02</span>
+                <h3>Cars</h3>
+                <p>How they're built, how they fail and how to fix them. It's where my garage work started.</p>
+            </li>
+            <li class="interest reveal">
+                <span class="service-num">/03</span>
+                <h3>Reading</h3>
+                <p>Books and long reads on whatever I'm curious about that month.</p>
+            </li>
+            <li class="interest reveal">
+                <span class="service-num">/04</span>
+                <h3>Research &amp; learning</h3>
+                <p>Picking a new topic and digging until I understand it, then usually building something with it.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section wrap contact" data-chapter="7" data-chapter-label="Contact" aria-labelledby="contact-title">
+        <div class="contact-mark reveal" aria-hidden="true">
+            <span class="liquid-logo liquid-logo--hero" data-liquid-logo><img src="/assets/logo-mark.svg" alt=""></span>
+        </div>
+        <p class="tag reveal">07 <i>/</i> Contact</p>
+        <h2 id="contact-title" class="contact-title reveal">Let's build <em>something.</em></h2>
+        <p class="contact-lede reveal">I'm open to internships, freelance builds and any project where software meets physical engineering.</p>
+
+        <div class="actions contact-actions reveal">
+            <a class="btn btn-solid btn-lg" href="mailto:sobukonlaolatunbosun1@gmail.com">
+                <svg class="i" viewBox="0 0 24 24"><use href="#i-mail"/></svg>
+                sobukonlaolatunbosun1@gmail.com
+            </a>
+            <button id="copy-email" class="btn btn-glass btn-lg" data-glass data-email="sobukonlaolatunbosun1@gmail.com" aria-live="polite">
+                <svg class="i" viewBox="0 0 24 24"><use href="#i-copy"/></svg>
+                <span>Copy email</span>
+            </button>
+        </div>
+
+        <p class="tag contact-time reveal">
+            <svg class="i i-sm" viewBox="0 0 24 24"><use href="#i-clock"/></svg>
+            <span>Local time <span id="local-time">WAT</span> (WAT, UTC+1)</span>
+        </p>
     </section>
 </main>
 
-<footer class="border-t border-black/10 py-10">
-    <div class="container-x flex flex-col md:flex-row justify-between gap-4 font-mono text-[12px] uppercase tracking-[0.14em] text-steel">
-        <p>&copy; <span id="year">2026</span> Ayomide Sobukonla</p>
-        <div class="flex gap-6">
-            <a class="hover:text-brand transition-colors" href="https://github.com/Techswitch-01" target="_blank" rel="noopener">GitHub</a>
-            <a class="hover:text-brand transition-colors" href="https://www.linkedin.com/in/sobukonla-ayomide-061712289" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
+<footer class="footer wrap">
+    <p>&copy; <span id="year">2026</span> Ayomide Sobukonla</p>
+    <div>
+        <a href="https://github.com/Techswitch-01" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sobukonla-ayomide-061712289" target="_blank" rel="noopener">LinkedIn</a>
     </div>
 </footer>
 
 <!-- Figma viewer -->
-<dialog id="figma-dialog" class="w-[min(96vw,1280px)] h-[min(88vh,860px)] p-0 rounded-card bg-ink text-paper backdrop:bg-black/70">
-    <div class="flex flex-col h-full">
-        <div class="flex items-center justify-between px-5 py-3">
-            <p id="figma-title" class="font-mono text-[12px] uppercase tracking-[0.14em]"></p>
-            <div class="flex items-center gap-4">
-            <a id="figma-open" class="font-mono text-[12px] uppercase tracking-[0.14em] text-white/70 hover:text-white" target="_blank" rel="noopener">Open in Figma</a>
-            <button id="figma-close" class="p-1" aria-label="Close design viewer">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-x"/></svg>
-            </button>
+<dialog id="figma-dialog" class="viewer viewer-figma" data-lenis-prevent>
+    <div class="viewer-inner">
+        <div class="viewer-bar">
+            <p id="figma-title" class="tag"></p>
+            <div class="viewer-tools">
+                <a id="figma-open" class="tag" target="_blank" rel="noopener">Open in Figma</a>
+                <button id="figma-close" class="icon-btn" aria-label="Close design viewer">
+                    <svg class="i" viewBox="0 0 24 24"><use href="#i-x"/></svg>
+                </button>
             </div>
         </div>
-        <iframe id="figma-frame" class="flex-1 w-full bg-white" title="Figma design file" allowfullscreen></iframe>
+        <iframe id="figma-frame" title="Figma design file" allowfullscreen></iframe>
     </div>
 </dialog>
 
 <!-- Video viewer -->
-<dialog id="video-dialog" class="w-[min(92vw,420px)] p-0 rounded-card bg-ink text-paper backdrop:bg-black/70">
-    <div class="flex items-center justify-between px-5 py-3">
-        <p id="video-title" class="font-mono text-[12px] uppercase tracking-[0.14em]"></p>
-        <button id="video-close" class="p-1" aria-label="Close video">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#i-x"/></svg>
+<dialog id="video-dialog" class="viewer viewer-video" data-lenis-prevent>
+    <div class="viewer-bar">
+        <p id="video-title" class="tag"></p>
+        <button id="video-close" class="icon-btn" aria-label="Close video">
+            <svg class="i" viewBox="0 0 24 24"><use href="#i-x"/></svg>
         </button>
     </div>
-    <video id="video-el" class="w-full block" controls playsinline preload="none"></video>
+    <video id="video-el" controls playsinline preload="none"></video>
 </dialog>
 
-<script>
-    // Mobile menu
-    (function () {
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const setOpen = (open) => {
-            menu.hidden = !open;
-            btn.setAttribute('aria-expanded', String(open));
-            btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-            btn.querySelector('use').setAttribute('href', open ? '#i-x' : '#i-menu');
-        };
-        btn.addEventListener('click', () => setOpen(menu.hidden));
-        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
-    })();
-
-    // Reveal on scroll
-    (function () {
-        const items = document.querySelectorAll('.reveal');
-        if (!('IntersectionObserver' in window)) {
-            items.forEach(el => el.classList.add('is-in'));
-            return;
-        }
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-in');
-                    io.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-        items.forEach(el => io.observe(el));
-    })();
-
-    // Work filter
-    (function () {
-        const buttons = document.querySelectorAll('[data-filter]');
-        const items = document.querySelectorAll('#work [data-cat]');
-        buttons.forEach(btn => btn.addEventListener('click', () => {
-            const f = btn.dataset.filter;
-            buttons.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
-            items.forEach(item => { item.hidden = f !== 'all' && item.dataset.cat !== f; });
-        }));
-    })();
-
-    // Figma viewer: the embed only loads when someone opens it
-    (function () {
-        const dialog = document.getElementById('figma-dialog');
-        const frame = document.getElementById('figma-frame');
-        const title = document.getElementById('figma-title');
-        document.querySelectorAll('[data-figma]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                if (frame.getAttribute('src') !== btn.dataset.figma) frame.src = btn.dataset.figma;
-                title.textContent = btn.dataset.title;
-                document.getElementById('figma-open').href = btn.dataset.figmaUrl;
-                dialog.showModal();
-            });
-        });
-        document.getElementById('figma-close').addEventListener('click', () => dialog.close());
-        dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
-    })();
-
-    // Play muted preview clips only while they are on screen
-    (function () {
-        const clips = document.querySelectorAll('video[data-inview]');
-        if (!clips.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause());
-        }, { threshold: 0.4 });
-        clips.forEach(v => io.observe(v));
-    })();
-
-    // Copy email
-    (function () {
-        const btn = document.getElementById('copy-email');
-        const label = btn.querySelector('span');
-        const icon = btn.querySelector('use');
-        btn.addEventListener('click', async () => {
-            try {
-                await navigator.clipboard.writeText(btn.dataset.email);
-                label.textContent = 'Copied';
-                icon.setAttribute('href', '#i-check');
-            } catch (e) {
-                label.textContent = btn.dataset.email;
-            }
-            setTimeout(() => {
-                label.textContent = 'Copy email';
-                icon.setAttribute('href', '#i-copy');
-            }, 2000);
-        });
-    })();
-
-    // Local time in Nigeria
-    (function () {
-        const el = document.getElementById('local-time');
-        const fmt = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Lagos' });
-        const tick = () => { el.textContent = fmt.format(new Date()); };
-        tick();
-        setInterval(tick, 30000);
-        document.getElementById('year').textContent = new Date().getFullYear();
-    })();
-
-    // Video viewer: the file only downloads when someone asks to watch it
-    (function () {
-        const dialog = document.getElementById('video-dialog');
-        const video = document.getElementById('video-el');
-        const title = document.getElementById('video-title');
-        document.querySelectorAll('[data-video]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                if (video.getAttribute('src') !== btn.dataset.video) video.src = btn.dataset.video;
-                title.textContent = btn.dataset.title;
-                dialog.showModal();
-                video.play().catch(() => {});
-            });
-        });
-        const close = () => dialog.close();
-        document.getElementById('video-close').addEventListener('click', close);
-        dialog.addEventListener('click', (e) => { if (e.target === dialog) close(); });
-        dialog.addEventListener('close', () => video.pause());
-    })();
-
-    // Hero background: animated node mesh (desktop only, skipped for reduced motion)
-    (function () {
-        const canvas = document.getElementById('hero-canvas');
-        if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        if (!window.matchMedia('(min-width: 768px)').matches) return;
-
-        const gl = canvas.getContext('webgl', { alpha: false, antialias: false, depth: false });
-        if (!gl) return;
-
-        let visible = true;
-        new IntersectionObserver((e) => { visible = e[0].isIntersecting; }).observe(canvas);
-
-        const syncSize = () => {
-            const dpr = Math.min(window.devicePixelRatio || 1, 1.5) * 0.6;
-            const w = Math.floor(canvas.clientWidth * dpr);
-            const h = Math.floor(canvas.clientHeight * dpr);
-            if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
-        };
-        new ResizeObserver(syncSize).observe(canvas);
-        syncSize();
-
-        const vs = `attribute vec2 a_position;
-        void main() { gl_Position = vec4(a_position, 0.0, 1.0); }`;
-
-        const fs = `precision mediump float;
-        uniform float u_time;
-        uniform vec2 u_resolution;
-        uniform vec2 u_mouse;
-
-        float hash(vec2 p) {
-            p = fract(p * vec2(123.34, 456.21));
-            p += dot(p, p + 45.32);
-            return fract(p.x * p.y);
-        }
-
-        vec2 get_point(vec2 id) {
-            float h = hash(id);
-            return id + vec2(sin(u_time * 0.5 + h * 6.28), cos(u_time * 0.8 + h * 6.28)) * 0.4;
-        }
-
-        void main() {
-            vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.y, u_resolution.x);
-            uv *= 4.0;
-            vec2 id = floor(uv);
-            float m = 0.0;
-            float minDist = 100.0;
-            vec2 mouse = (u_mouse / u_resolution - 0.5) * 8.0;
-
-            for (float y = -1.0; y <= 1.0; y++) {
-                for (float x = -1.0; x <= 1.0; x++) {
-                    vec2 p = get_point(id + vec2(x, y));
-                    float d = length(uv - p) - exp(-length(p - mouse) * 2.0) * 0.2;
-                    if (d < minDist) minDist = d;
-
-                    for (float y2 = -1.0; y2 <= 1.0; y2++) {
-                        for (float x2 = -1.0; x2 <= 1.0; x2++) {
-                            if (x == 0.0 && y == 0.0 && x2 == 0.0 && y2 == 0.0) continue;
-                            vec2 p2 = get_point(id + vec2(x2, y2));
-                            float lineDist = length(p - p2);
-                            if (lineDist < 1.5) {
-                                float l = 1.0 - smoothstep(0.0, 1.5, lineDist);
-                                vec2 pa = uv - p, ba = p2 - p;
-                                float h = clamp(dot(pa, ba) / dot(ba, ba), 0.0, 1.0);
-                                m += smoothstep(0.02, 0.0, length(pa - ba * h)) * l * 0.3;
-                            }
-                        }
-                    }
-                }
-            }
-            m += smoothstep(0.08, 0.0, minDist);
-            gl_FragColor = vec4(mix(vec3(0.957, 0.957, 0.961), vec3(0.83, 0.03, 0.02), m), 1.0);
-        }`;
-
-        const compile = (type, src) => {
-            const s = gl.createShader(type);
-            gl.shaderSource(s, src);
-            gl.compileShader(s);
-            return s;
-        };
-        const prog = gl.createProgram();
-        gl.attachShader(prog, compile(gl.VERTEX_SHADER, vs));
-        gl.attachShader(prog, compile(gl.FRAGMENT_SHADER, fs));
-        gl.linkProgram(prog);
-        gl.useProgram(prog);
-
-        gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
-        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
-        const pos = gl.getAttribLocation(prog, 'a_position');
-        gl.enableVertexAttribArray(pos);
-        gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
-
-        const uTime = gl.getUniformLocation(prog, 'u_time');
-        const uRes = gl.getUniformLocation(prog, 'u_resolution');
-        const uMouse = gl.getUniformLocation(prog, 'u_mouse');
-
-        const mouse = { x: 0, y: 0 };
-        window.addEventListener('mousemove', (e) => {
-            const r = canvas.getBoundingClientRect();
-            const s = canvas.width / r.width;
-            mouse.x = (e.clientX - r.left) * s;
-            mouse.y = (r.bottom - e.clientY) * s;
-        }, { passive: true });
-
-        const render = (t) => {
-            requestAnimationFrame(render);
-            if (!visible) return;
-            gl.viewport(0, 0, canvas.width, canvas.height);
-            gl.uniform1f(uTime, t * 0.001);
-            gl.uniform2f(uRes, canvas.width, canvas.height);
-            gl.uniform2f(uMouse, mouse.x, mouse.y);
-            gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-        };
-        requestAnimationFrame(render);
-    })();
-</script>
+<script type="module" src="/src/main.js"></script>
 </body>
 </html>

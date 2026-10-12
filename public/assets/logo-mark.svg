@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 100 100">
+    <!-- Ayomide mark: an A drawn as a chevron over a wheel hub -->
+    <path d="M50 4 L94 92 L72 92 L50 46 L28 92 L6 92 Z" fill="#000"/>
+    <circle cx="50" cy="78" r="10" fill="#000"/>
+</svg>

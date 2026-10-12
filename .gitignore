@@ -1,9 +1,9 @@
 node_modules/
+dist/
 
-# Raw media: only the compressed copies in assets/rc/ are published
-assets/rc vid*.mp4
-assets/certificate dbn ai course.pdf
+# Raw media kept locally: only the compressed copies in public/assets/rc/ are published
+media-raw/
 
 # Local-only folders that must never be deployed
 vicxien_files/
-assets/aftak_engineering/
+public/assets/aftak_engineering/
